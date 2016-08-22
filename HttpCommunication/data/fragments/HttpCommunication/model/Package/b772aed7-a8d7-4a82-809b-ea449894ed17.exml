@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="httpcommunication" version="4">
+  <OBJECT>
+    <ID name="httpcommunication" mc="Standard.Package" uid="b772aed7-a8d7-4a82-809b-ea449894ed17"/>
+    <PID name="HttpCommunication" mc="Standard.Project" uid="5c01a132-251a-4441-a771-0b3e481199e4"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[httpcommunication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Httpcommunication" mc="Standard.Package" uid="09790c6c-58ef-4591-825e-a107c512dafa"/>
+        <COMPID name="Pedagogy" mc="Standard.Package" uid="2d463cd8-0794-4696-af0d-ccee9be32f66"/>
+        <COMPID name="Scenario" mc="Standard.Package" uid="a172e26e-77b4-4c3e-b2bc-81f751efd80f"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

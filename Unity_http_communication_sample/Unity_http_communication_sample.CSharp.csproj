@@ -61,15 +61,41 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>Assets\UnityMascaret\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr4.Runtime.net35">
+      <HintPath>Assets\UnityMascaret\Antlr4.Runtime.net35.dll</HintPath>
+    </Reference>
+    <Reference Include="Mascaret">
+      <HintPath>Assets\UnityMascaret\Mascaret.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Behaviors\Capsule_Agent_Move.cs" />
     <Compile Include="Assets\Character.cs" />
     <Compile Include="Assets\Controller.cs" />
     <Compile Include="Assets\Network\httpRequest.cs" />
+    <Compile Include="Assets\UnityMascaret\CheckMascaret.cs" />
+    <Compile Include="Assets\UnityMascaret\EntityGo.cs" />
+    <Compile Include="Assets\UnityMascaret\OSDWindow.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityBehaviorExecution.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityBehaviorRealizer.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityKeyboard.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityMascaretApplication.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityMascaretInterface.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityMouse.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityShapeSpecification.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityVirtualRealityComponentFactory.cs" />
+    <Compile Include="Assets\UnityMascaret\UnityWindow3D.cs" />
     <Compile Include="Assets\XmlData.cs" />
     <Compile Include="Assets\historic.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ENV_http_com.xml" />
+    <None Include="Assets\MAS_http_com.xml" />
+    <None Include="Assets\MOD_http_com.xml" />
+    <None Include="Assets\UnityMascaret\Antlr4.Runtime.net35.xml" />
     <None Include="Assets\historic.xml" />
     <None Include="Assets\parameter.xml" />
   </ItemGroup>

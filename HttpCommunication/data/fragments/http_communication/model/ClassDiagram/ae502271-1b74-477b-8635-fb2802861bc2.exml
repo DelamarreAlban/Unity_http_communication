@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="overview diagram" version="4">
+  <OBJECT>
+    <ID name="overview diagram" mc="Standard.ClassDiagram" uid="ae502271-1b74-477b-8635-fb2802861bc2"/>
+    <PID name="http_communication" mc="Standard.Package" uid="d3c285be-f0fc-4593-99a0-d377137ed1fc"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">58</ATT>
+      <ATT name="UiData"><![CDATA[eJztU01v4jAQ/SuW7xhIaeGQUrWkQlWzpYK20p6qSTywbh0b2eYj/34dEnYLK6KsVHUve7I9nvfm6014tc0kWaOxQqtL2mUdSq6G4SR5w9QRwb2JEpcv8ZJqs2CZ5iiFZlzAwkDGkAunDbMOnHhnKDFD5Wz5TvdO42y2e0flm5IM3rR5/RW0Q4fho9FLNC4nCjIfS0KuVy4CB/7vBeQKqyTUSkraHobtPeAP6MzlEulBCUFdCbbwtyzVBlmJbZDfCGwKHPk+2O3WTXHeMMqDp6iQBLcuSu58jrtrceE4h5V0R0W2y3LqCjcowSH3eRz17FthIuvC4jOXYG01CQJ43gmCfrfVTfq9Vq/fT1qDi7Pz1jwJBp1gcNFN0qC+257N3Su9UTEkKI8Cz5wRakGH2rdyLXBDqm6E7Z1XbTFa4p0a6WyprXB+DCeoG1CNfgjJDRYMsbBFC6vjJCIW6t02d79ZRAY2Pp0YcjSH0jur3Z79vvASb5ksGPzCHBB+zb78HeqfiE3wEyqIxiy+/n47fb25Ht2Pp5Pnh+hzhNFg7T6O6rdoPkig918CXymBp8njZ8/+5NdPWdODKQ==]]></ATT>
+      <ATT name="PdeProperties"></ATT>
+      <ATT name="Name"><![CDATA[overview diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

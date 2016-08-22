@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="http_communication" version="4">
+  <OBJECT>
+    <ID name="http_communication" mc="Standard.PropertyContainer" uid="e9f3c663-32b6-4d44-8344-08c91d528624"/>
+    <PID name="http_communication" mc="Standard.AnalystProject" uid="37e037c1-8e08-4be5-8fdd-09312a9a3dcf"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[http_communication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

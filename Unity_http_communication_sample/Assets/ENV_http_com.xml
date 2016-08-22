@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Area name="HttpCommunication">
+<Model url="MOD_http_com" xmi2="true"/>
+
+  	<Human name="Capsule" class="Capsule_Agent" area="HttpCommunication">
+  		<Shape url = "Capsule" />
+  		<Behavior name ="SimpleCommunicationBehavior" start = "true" interval="0.2"/>        
+  		<Behavior name ="ProceduralBehavior" start = "true" interval="0.2"/>
+  	</Human>
+
+	<Organisation name ="org">
+    		<Structure>Team</Structure>
+    		<Affect type = "Role">
+      			<Role>Capsule</Role>
+         		<AID>
+            			<Name>Capsule</Name>
+            			<Plateform>localhost</Plateform>
+            			<Port>8080</Port>
+         		</AID>
+    		</Affect>
+
+	</Organisation>
+
+</Area>

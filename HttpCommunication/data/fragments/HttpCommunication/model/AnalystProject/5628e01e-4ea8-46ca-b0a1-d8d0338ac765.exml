@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="HttpCommunication" version="4">
+  <OBJECT>
+    <ID name="HttpCommunication" mc="Standard.AnalystProject" uid="5628e01e-4ea8-46ca-b0a1-d8d0338ac765"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[HttpCommunication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="PropertyRoot">
+        <COMPID name="HttpCommunication" mc="Standard.PropertyContainer" uid="de87cf88-1ec0-476e-a036-57294d0667cb"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="http_communication" version="4">
+  <OBJECT>
+    <ID name="http_communication" mc="Standard.Project" uid="046c89c4-b867-477a-8472-74b98cc55e78"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[http_communication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="http_communication" mc="Standard.DiagramSet" uid="a38890b3-c99b-49e6-a406-f8248381c8ab"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="http_communication" mc="Standard.Package" uid="d3c285be-f0fc-4593-99a0-d377137ed1fc"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

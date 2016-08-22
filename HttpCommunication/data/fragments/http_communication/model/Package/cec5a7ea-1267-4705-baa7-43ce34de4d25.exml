@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="http_com_env" version="4">
+  <OBJECT>
+    <ID name="http_com_env" mc="Standard.Package" uid="cec5a7ea-1267-4705-baa7-43ce34de4d25"/>
+    <PID name="http_communication" mc="Standard.Package" uid="d3c285be-f0fc-4593-99a0-d377137ed1fc"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[http_com_env]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Environnment" mc="Standard.Package" uid="f9fbc92b-fa25-4e2a-a832-b4680c0afcd4"/>
+        <COMPID name="Organisation" mc="Standard.Package" uid="4f53a383-6257-4470-84b2-0c073597c28d"/>
+        <COMPID name="Agent" mc="Standard.Package" uid="3108c192-06e9-4d5a-b115-c88a83a8f94d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

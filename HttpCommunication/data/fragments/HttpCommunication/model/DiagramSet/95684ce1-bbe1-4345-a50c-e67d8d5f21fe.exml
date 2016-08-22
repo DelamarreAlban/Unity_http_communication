@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="HttpCommunication" version="4">
+  <OBJECT>
+    <ID name="HttpCommunication" mc="Standard.DiagramSet" uid="95684ce1-bbe1-4345-a50c-e67d8d5f21fe"/>
+    <PID name="HttpCommunication" mc="Standard.Project" uid="5c01a132-251a-4441-a771-0b3e481199e4"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[HttpCommunication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

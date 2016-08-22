@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="VirtualHuman" version="4">
+  <OBJECT>
+    <ID name="VirtualHuman" mc="Standard.Stereotype" uid="1a360ae9-374c-461b-b127-06ab86c06b87"/>
+    <PID name="LocalProfile" mc="Standard.Profile" uid="2843bfea-eba3-4b96-916f-159061fd0f4b"/>
+    <ATTRIBUTES>
+      <ATT name="Image"></ATT>
+      <ATT name="Icon"></ATT>
+      <ATT name="IsHidden">false</ATT>
+      <ATT name="LabelKey"><![CDATA[VirtualHuman]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Class]]></ATT>
+      <ATT name="Name"><![CDATA[VirtualHuman]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

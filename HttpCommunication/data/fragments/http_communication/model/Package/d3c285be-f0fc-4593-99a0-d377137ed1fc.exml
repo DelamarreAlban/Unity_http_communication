@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="http_communication" version="4">
+  <OBJECT>
+    <ID name="http_communication" mc="Standard.Package" uid="d3c285be-f0fc-4593-99a0-d377137ed1fc"/>
+    <PID name="http_communication" mc="Standard.Project" uid="046c89c4-b867-477a-8472-74b98cc55e78"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[http_communication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="http_com_env" mc="Standard.Package" uid="cec5a7ea-1267-4705-baa7-43ce34de4d25"/>
+        <COMPID name="Scenario" mc="Standard.Package" uid="38406d38-d6af-4837-9389-2fb26a38c23e"/>
+        <COMPID name="Pedagogy" mc="Standard.Package" uid="0fc6b6d2-7b6e-428e-a88f-119496d767eb"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="Standard.ClassDiagram" uid="ae502271-1b74-477b-8635-fb2802861bc2"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

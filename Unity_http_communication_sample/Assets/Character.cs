@@ -20,9 +20,6 @@ public class Character : MonoBehaviour {
         request = GetComponent<httpRequest>();
         //request = new httpRequest();
         xml = new XmlData();
-
-        string receivedXML = request.GET(url + "/parameter");
-        GETxmlParameters(receivedXML);
     }
 
     public void GETxmlParameters(string xmlString)
@@ -59,7 +56,8 @@ public class Character : MonoBehaviour {
         {
             //Coroutines
             //string receivedXML = request.GET(url + "/parameter", GETxmlParameters);
-            
+            string receivedXML = request.GET(url + "/parameter");
+            GETxmlParameters(receivedXML);
         }
 
         if (Input.GetKeyDown("c"))

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Organisation Class diagram" version="4">
+  <OBJECT>
+    <ID name="Organisation Class diagram" mc="Standard.ClassDiagram" uid="e3b6fa4d-8914-4a33-817f-5a9499fc97fc"/>
+    <PID name="Organisation" mc="Standard.Package" uid="27310383-7929-43ac-bd1b-3140fbc6e3ca"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">38</ATT>
+      <ATT name="UiData"><![CDATA[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]]></ATT>
+      <ATT name="PdeProperties"></ATT>
+      <ATT name="Name"><![CDATA[Organisation Class diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Standard.Note" uid="180afa4c-c3c9-4287-926a-c258cf36bbeb"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Standard.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

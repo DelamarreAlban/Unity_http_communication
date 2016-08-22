@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Agent" version="4">
+  <OBJECT>
+    <ID name="Agent" mc="Standard.Package" uid="3108c192-06e9-4d5a-b115-c88a83a8f94d"/>
+    <PID name="http_com_env" mc="Standard.Package" uid="cec5a7ea-1267-4705-baa7-43ce34de4d25"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Agent]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Capsule_Agent" mc="Standard.Class" uid="56770cc5-af8c-4922-a89b-402f4b4b869d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

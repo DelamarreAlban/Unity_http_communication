@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LocalProfile="http:///schemas/LocalProfile/_yqY_8GiuEea2ePexK5zjhQ/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/LocalProfile/_yqY_8GiuEea2ePexK5zjhQ/0 LocalProfile.profile.xmi#_yrXQV2iuEea2ePexK5zjhQ">
+  <uml:Model xmi:id="_yqSSQGiuEea2ePexK5zjhQ" name="httpcommunication">
+    <eAnnotations xmi:id="_yqSSQWiuEea2ePexK5zjhQ" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_yqSSQmiuEea2ePexK5zjhQ" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_yqSSQ2iuEea2ePexK5zjhQ" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_yqSSRGiuEea2ePexK5zjhQ" name="Httpcommunication">
+      <packagedElement xmi:type="uml:Package" xmi:id="_yqSSRWiuEea2ePexK5zjhQ" name="Environment"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_yqSSRmiuEea2ePexK5zjhQ" name="Organisation">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_yqSSR2iuEea2ePexK5zjhQ" name="CapsuleR" isAbstract="true">
+          <ownedOperation xmi:id="_yqSSSGiuEea2ePexK5zjhQ" name="Move" visibility="public" redefinedOperation="_yqSSTGiuEea2ePexK5zjhQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_yqSSSWiuEea2ePexK5zjhQ" name="Agent">
+        <packagedElement xmi:type="uml:Class" xmi:id="_yqSSSmiuEea2ePexK5zjhQ" name="Capsule_Agent" clientDependency="_yqSSS2iuEea2ePexK5zjhQ">
+          <interfaceRealization xmi:id="_yqSSS2iuEea2ePexK5zjhQ" name="InterfaceRealization" supplier="_yqSSR2iuEea2ePexK5zjhQ" client="_yqSSSmiuEea2ePexK5zjhQ" contract="_yqSSR2iuEea2ePexK5zjhQ"/>
+          <ownedOperation xmi:id="_yqSSTGiuEea2ePexK5zjhQ" name="Move" visibility="public"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_yqSSTWiuEea2ePexK5zjhQ" name="Pedagogy"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_yqSSTmiuEea2ePexK5zjhQ" name="Scenario">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_yqSST2iuEea2ePexK5zjhQ" name="Team">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_yqSSUGiuEea2ePexK5zjhQ" name="moveProcedure">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_yqSSUWiuEea2ePexK5zjhQ" name="locals"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_yqSSUmiuEea2ePexK5zjhQ" name="Move" outgoing="_yqSSVWiuEea2ePexK5zjhQ" incoming="_yqSSV2iuEea2ePexK5zjhQ" inPartition="_yqSSWWiuEea2ePexK5zjhQ" operation="_yqSSSGiuEea2ePexK5zjhQ"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_yqSSU2iuEea2ePexK5zjhQ" name="Initial Node" outgoing="_yqSSV2iuEea2ePexK5zjhQ" inPartition="_yqSSWWiuEea2ePexK5zjhQ"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_yqSSVGiuEea2ePexK5zjhQ" name="Activity Final Node" incoming="_yqSSVWiuEea2ePexK5zjhQ" inPartition="_yqSSWWiuEea2ePexK5zjhQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_yqSSVWiuEea2ePexK5zjhQ" name="ControlFlow" source="_yqSSUmiuEea2ePexK5zjhQ" target="_yqSSVGiuEea2ePexK5zjhQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_yqSSVmiuEea2ePexK5zjhQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_yqSSV2iuEea2ePexK5zjhQ" name="ControlFlow" source="_yqSSU2iuEea2ePexK5zjhQ" target="_yqSSUmiuEea2ePexK5zjhQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_yqSSWGiuEea2ePexK5zjhQ" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_yqSSWWiuEea2ePexK5zjhQ" name="Capsule" node="_yqSSUmiuEea2ePexK5zjhQ _yqSSU2iuEea2ePexK5zjhQ _yqSSVGiuEea2ePexK5zjhQ" represents="_yqSSWmiuEea2ePexK5zjhQ"/>
+        </ownedBehavior>
+        <ownedAttribute xmi:id="_yqSSWmiuEea2ePexK5zjhQ" name="Capsule" type="_yqSSR2iuEea2ePexK5zjhQ" aggregation="composite"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_yrd-AGiuEea2ePexK5zjhQ">
+      <eAnnotations xmi:id="_yrfzMGiuEea2ePexK5zjhQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="LocalProfile.profile.xmi#_yrXQV2iuEea2ePexK5zjhQ"/>
+      </eAnnotations>
+      <appliedProfile href="LocalProfile.profile.xmi#_yrXQUGiuEea2ePexK5zjhQ"/>
+    </profileApplication>
+  </uml:Model>
+  <LocalProfile:Role xmi:id="_yriPcGiuEea2ePexK5zjhQ" base_Interface="_yqSSR2iuEea2ePexK5zjhQ"/>
+  <LocalProfile:VirtualHuman xmi:id="_yri2gGiuEea2ePexK5zjhQ" base_Class="_yqSSSmiuEea2ePexK5zjhQ"/>
+</xmi:XMI>
