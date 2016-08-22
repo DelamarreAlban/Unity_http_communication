@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+    <scenes>
+        <scene>
+            <object type="Capsule" color="blue"> Hello, I'm a blue capsule</object>
+            <object type="Cube" color="green"> Hello, I'm a green cube</object>
+            <object type="Cylinder" color="red"> Hello, I'm a red Cylinder</object>
+            <object type="Sphere" color="magenta"> Hello, I'm a pink sphere</object>
+        </scene>
+    </scenes>
+</xml>
