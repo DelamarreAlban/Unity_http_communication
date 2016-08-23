@@ -1,7 +1,7 @@
 #Folders#
 ##################
-node_modules/*
-Temp/*
+node_modules/
+Temp/
 
 
 # Compiled source #

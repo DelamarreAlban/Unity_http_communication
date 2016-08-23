@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_yrXQUGiuEea2ePexK5zjhQ" name="LocalProfile" metaclassReference="_yrXQYGiuEea2ePexK5zjhQ _yrXQYWiuEea2ePexK5zjhQ">
-  <eAnnotations xmi:id="_yrXQUWiuEea2ePexK5zjhQ" source="Objing">
-    <contents xmi:type="uml:Property" xmi:id="_yrXQUmiuEea2ePexK5zjhQ" name="Module">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_yrXQU2iuEea2ePexK5zjhQ" value="eb70271f-18ff-4e53-b674-1c3a1f8a3f00"/>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_vrihYGkrEea0fqWLv0EaNg" name="LocalProfile" metaclassReference="_vrihcGkrEea0fqWLv0EaNg _vrihcWkrEea0fqWLv0EaNg">
+  <eAnnotations xmi:id="_vrihYWkrEea0fqWLv0EaNg" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_vrihYmkrEea0fqWLv0EaNg" name="Module">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_vrihY2krEea0fqWLv0EaNg" value="eb70271f-18ff-4e53-b674-1c3a1f8a3f00"/>
     </contents>
-    <contents xmi:type="uml:Property" xmi:id="_yrXQVGiuEea2ePexK5zjhQ" name="ID">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_yrXQVWiuEea2ePexK5zjhQ" value="2843bfea-eba3-4b96-916f-159061fd0f4b"/>
+    <contents xmi:type="uml:Property" xmi:id="_vrihZGkrEea0fqWLv0EaNg" name="ID">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_vrihZWkrEea0fqWLv0EaNg" value="2843bfea-eba3-4b96-916f-159061fd0f4b"/>
     </contents>
   </eAnnotations>
-  <eAnnotations xmi:id="_yrXQVmiuEea2ePexK5zjhQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-    <contents xmi:type="ecore:EPackage" xmi:id="_yrXQV2iuEea2ePexK5zjhQ" name="LocalProfile" nsURI="http:///schemas/LocalProfile/_yqY_8GiuEea2ePexK5zjhQ/0" nsPrefix="LocalProfile">
-      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yrXQWGiuEea2ePexK5zjhQ" name="VirtualHuman">
-        <eAnnotations xmi:id="_yrXQWWiuEea2ePexK5zjhQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_yrXQYmiuEea2ePexK5zjhQ"/>
-        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_yrXQWmiuEea2ePexK5zjhQ" name="base_Class" ordered="false" lowerBound="1">
+  <eAnnotations xmi:id="_vrihZmkrEea0fqWLv0EaNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_vrihZ2krEea0fqWLv0EaNg" name="LocalProfile" nsURI="http:///schemas/LocalProfile/_vrh6a2krEea0fqWLv0EaNg/0" nsPrefix="LocalProfile">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_vrihaGkrEea0fqWLv0EaNg" name="VirtualHuman">
+        <eAnnotations xmi:id="_vrihaWkrEea0fqWLv0EaNg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vrihcmkrEea0fqWLv0EaNg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vrihamkrEea0fqWLv0EaNg" name="base_Class" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
         </eStructuralFeatures>
       </eClassifiers>
-      <eClassifiers xmi:type="ecore:EClass" xmi:id="_yrXQXGiuEea2ePexK5zjhQ" name="Role">
-        <eAnnotations xmi:id="_yrXQXWiuEea2ePexK5zjhQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_yrX3Y2iuEea2ePexK5zjhQ"/>
-        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_yrXQXmiuEea2ePexK5zjhQ" name="base_Interface" ordered="false" lowerBound="1">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_vrihbGkrEea0fqWLv0EaNg" name="Role">
+        <eAnnotations xmi:id="_vrihbWkrEea0fqWLv0EaNg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vriheWkrEea0fqWLv0EaNg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vrihbmkrEea0fqWLv0EaNg" name="base_Interface" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interface"/>
         </eStructuralFeatures>
       </eClassifiers>
     </contents>
   </eAnnotations>
-  <elementImport xmi:id="_yrXQYGiuEea2ePexK5zjhQ">
+  <elementImport xmi:id="_vrihcGkrEea0fqWLv0EaNg">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
   </elementImport>
-  <elementImport xmi:id="_yrXQYWiuEea2ePexK5zjhQ">
+  <elementImport xmi:id="_vrihcWkrEea0fqWLv0EaNg">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interface"/>
   </elementImport>
-  <packagedElement xmi:type="uml:Stereotype" xmi:id="_yrXQYmiuEea2ePexK5zjhQ" name="VirtualHuman">
-    <eAnnotations xmi:id="_yrXQY2iuEea2ePexK5zjhQ" source="Objing">
-      <contents xmi:type="uml:Property" xmi:id="_yrXQZGiuEea2ePexK5zjhQ" name="ID">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_yrXQZWiuEea2ePexK5zjhQ" value="1a360ae9-374c-461b-b127-06ab86c06b87"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_vrihcmkrEea0fqWLv0EaNg" name="VirtualHuman">
+    <eAnnotations xmi:id="_vrihc2krEea0fqWLv0EaNg" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_vrihdGkrEea0fqWLv0EaNg" name="ID">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vrihdWkrEea0fqWLv0EaNg" value="1a360ae9-374c-461b-b127-06ab86c06b87"/>
       </contents>
     </eAnnotations>
-    <ownedAttribute xmi:id="_yrX3YGiuEea2ePexK5zjhQ" name="base_Class" association="_yrX3YWiuEea2ePexK5zjhQ">
+    <ownedAttribute xmi:id="_vrihdmkrEea0fqWLv0EaNg" name="base_Class" association="_vrihd2krEea0fqWLv0EaNg">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Extension" xmi:id="_yrX3YWiuEea2ePexK5zjhQ" name="Class_VirtualHuman" memberEnd="_yrX3YmiuEea2ePexK5zjhQ _yrX3YGiuEea2ePexK5zjhQ">
-    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_yrX3YmiuEea2ePexK5zjhQ" name="extension_VirtualHuman" type="_yrXQYmiuEea2ePexK5zjhQ" aggregation="composite" association="_yrX3YWiuEea2ePexK5zjhQ"/>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_vrihd2krEea0fqWLv0EaNg" name="Class_VirtualHuman" memberEnd="_vriheGkrEea0fqWLv0EaNg _vrihdmkrEea0fqWLv0EaNg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_vriheGkrEea0fqWLv0EaNg" name="extension_VirtualHuman" type="_vrihcmkrEea0fqWLv0EaNg" aggregation="composite" association="_vrihd2krEea0fqWLv0EaNg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Stereotype" xmi:id="_yrX3Y2iuEea2ePexK5zjhQ" name="Role">
-    <eAnnotations xmi:id="_yrX3ZGiuEea2ePexK5zjhQ" source="Objing">
-      <contents xmi:type="uml:Property" xmi:id="_yrX3ZWiuEea2ePexK5zjhQ" name="ID">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_yrX3ZmiuEea2ePexK5zjhQ" value="c6a64931-9cc1-4ee3-b4b7-51d001dfb707"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_vriheWkrEea0fqWLv0EaNg" name="Role">
+    <eAnnotations xmi:id="_vrihemkrEea0fqWLv0EaNg" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_vrihe2krEea0fqWLv0EaNg" name="ID">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vrihfGkrEea0fqWLv0EaNg" value="c6a64931-9cc1-4ee3-b4b7-51d001dfb707"/>
       </contents>
     </eAnnotations>
-    <ownedAttribute xmi:id="_yrX3Z2iuEea2ePexK5zjhQ" name="base_Interface" association="_yrX3aGiuEea2ePexK5zjhQ">
+    <ownedAttribute xmi:id="_vrihfWkrEea0fqWLv0EaNg" name="base_Interface" association="_vrihfmkrEea0fqWLv0EaNg">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interface"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Extension" xmi:id="_yrX3aGiuEea2ePexK5zjhQ" name="Interface_Role" memberEnd="_yrX3aWiuEea2ePexK5zjhQ _yrX3Z2iuEea2ePexK5zjhQ">
-    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_yrX3aWiuEea2ePexK5zjhQ" name="extension_Role" type="_yrX3Y2iuEea2ePexK5zjhQ" aggregation="composite" association="_yrX3aGiuEea2ePexK5zjhQ"/>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_vrihfmkrEea0fqWLv0EaNg" name="Interface_Role" memberEnd="_vrihf2krEea0fqWLv0EaNg _vrihfWkrEea0fqWLv0EaNg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_vrihf2krEea0fqWLv0EaNg" name="extension_Role" type="_vriheWkrEea0fqWLv0EaNg" aggregation="composite" association="_vrihfmkrEea0fqWLv0EaNg"/>
   </packagedElement>
 </uml:Profile>
