@@ -50,10 +50,14 @@ public class UnityMascaretApplication : MonoBehaviour
 		m_Mascaret.VRComponentFactory = new UnityVirtualRealityComponentFactory();
 		m_Mascaret.window.addPeripheric(new UnityKeyboard());
 		m_Mascaret.window.addPeripheric(new UnityMouse());
-		//m_Mascaret.Log += new LogHandler((message) => { Debug.LogWarning("Mascaret Message :" + message); });
-		//m_Mascaret.parse(m_ApplicationFile, Application.dataPath + "/StreamingAssets/" + m_BaseDir + "/", loadAll);
+        
 
-		m_Mascaret.parse(m_ApplicationFile, "", loadAll);
+        //ScriptableObject communicationManager = ScriptableObject.CreateInstance("HttpCommunicationManager");
+        //communicationManager.instantiate(portNumber, ressourceDir, noServer);
+        //m_Mascaret.Log += new LogHandler((message) => { Debug.LogWarning("Mascaret Message :" + message); });
+        //m_Mascaret.parse(m_ApplicationFile, Application.dataPath + "/StreamingAssets/" + m_BaseDir + "/", loadAll);
+
+        m_Mascaret.parse(m_ApplicationFile, "", loadAll);
 
 		//m_Mascaret.parse(m_ApplicationFile, Application.streamingAssetsPath + m_BaseDir + "/", loadAll);
 	}
