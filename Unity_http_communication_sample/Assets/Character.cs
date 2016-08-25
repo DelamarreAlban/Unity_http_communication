@@ -66,6 +66,7 @@ public class Character : MonoBehaviour {
         }
     }
 
+
     public void colorChanged(GameObject go,  string color)
     {
         switch (color)

@@ -4,8 +4,10 @@ using System.Collections;
 public class Controller : MonoBehaviour {
 
 	float speed = 6.0F;
-	float jumpSpeed = 8.0F;
+	float jumpSpeed = 10.0F;
 	float gravity = 20.0F;
+
+    bool jumpBool = false;
 
 	private Vector3 moveDirection = Vector3.zero;
 
@@ -22,8 +24,11 @@ public class Controller : MonoBehaviour {
 
 			moveDirection *= speed;
 
-			if (Input.GetButton ("Jump"))
-				moveDirection.y = jumpSpeed;
+            if (Input.GetButton("Jump") || jumpBool)
+            {
+                moveDirection.y = jumpSpeed;
+                jumpBool = false;
+            }
 		}
 
 		moveDirection.y -= gravity * Time.deltaTime;
@@ -31,4 +36,8 @@ public class Controller : MonoBehaviour {
 		controller.Move (moveDirection * Time.deltaTime);
 	}
 
+    public void jump()
+    {
+        jumpBool = true;
+    }
 }

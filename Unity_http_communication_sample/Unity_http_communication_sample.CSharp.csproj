@@ -72,12 +72,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Behaviors\Capsule_Agent_Jump.cs" />
     <Compile Include="Assets\Behaviors\Capsule_Agent_Move.cs" />
     <Compile Include="Assets\Character.cs" />
     <Compile Include="Assets\Controller.cs" />
     <Compile Include="Assets\Network\httpRequest.cs" />
     <Compile Include="Assets\UnityMascaret\CheckMascaret.cs" />
     <Compile Include="Assets\UnityMascaret\EntityGo.cs" />
+    <Compile Include="Assets\UnityMascaret\MascaretUnityActionRecorder.cs" />
     <Compile Include="Assets\UnityMascaret\OSDWindow.cs" />
     <Compile Include="Assets\UnityMascaret\UnityBehaviorExecution.cs" />
     <Compile Include="Assets\UnityMascaret\UnityBehaviorRealizer.cs" />

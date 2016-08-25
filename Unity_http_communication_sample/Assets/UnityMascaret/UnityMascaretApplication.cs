@@ -12,6 +12,8 @@ public class UnityMascaretApplication : MonoBehaviour
 	public TextAsset masFile;
 	public TextAsset envFile;
 
+    private CallProcedureBehaviorExecution procedureBehaviorExecution;
+
     #region Useless
     [HideInInspector]
     public Vector2 scrollPosition;
@@ -28,6 +30,8 @@ public class UnityMascaretApplication : MonoBehaviour
     #endregion
 
 	public bool loadAll = true;
+
+    private MascaretUnityActionRecorder actionRecorder;
 
 
     private VRApplication m_Mascaret;
@@ -50,7 +54,6 @@ public class UnityMascaretApplication : MonoBehaviour
 		m_Mascaret.VRComponentFactory = new UnityVirtualRealityComponentFactory();
 		m_Mascaret.window.addPeripheric(new UnityKeyboard());
 		m_Mascaret.window.addPeripheric(new UnityMouse());
-        
 
         //ScriptableObject communicationManager = ScriptableObject.CreateInstance("HttpCommunicationManager");
         //communicationManager.instantiate(portNumber, ressourceDir, noServer);
@@ -59,8 +62,11 @@ public class UnityMascaretApplication : MonoBehaviour
 
         m_Mascaret.parse(m_ApplicationFile, "", loadAll);
 
-		//m_Mascaret.parse(m_ApplicationFile, Application.streamingAssetsPath + m_BaseDir + "/", loadAll);
-	}
+        actionRecorder = new MascaretUnityActionRecorder(m_Mascaret.AgentPlateform);
+        
+        //m_Mascaret.parse(m_ApplicationFile, Application.streamingAssetsPath + m_BaseDir + "/", loadAll);
+
+    }
 
 	void Start()
 	{
@@ -76,15 +82,40 @@ public class UnityMascaretApplication : MonoBehaviour
 
 		if (procedure != "") 
 		{
-			startProcedure(procedure);
-		}
+            startProcedure(procedure);
+        }
 
-		
-	}
+        
+    }
 	
 	void Update()
 	{
 		m_Mascaret.step();
+
+        if (Input.GetKeyDown("m"))
+        {
+            launchProcedure("moveProcedure");
+        }
+
+        if (Input.GetKeyDown("j"))
+        {
+            launchProcedure("jumpProcedure");
+        }
+
+        if (Input.GetKeyDown("b"))
+        {
+            launchProcedure("MoveJump");
+        }
+
+        if (procedureBehaviorExecution != null)
+        {
+            if (procedureBehaviorExecution.IsFinished)
+            {
+                actionRecorder.getProcedureExecutions(procedureBehaviorExecution);
+            }
+        }
+
+        
 	}
 
 	public void OnGUI()
@@ -164,10 +195,10 @@ public class UnityMascaretApplication : MonoBehaviour
 
     private void startProcedure(string procedure)
     {
+        actionRecorder.setRunningProcedureName(procedure);
         string orgEntity = null;
 
         List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
-        Debug.Log(structs.Count);
         foreach (OrganisationalStructure s in structs)
         {
             List<Procedure> procs = s.Procedures;
@@ -176,6 +207,7 @@ public class UnityMascaretApplication : MonoBehaviour
                 if (p.name == procedure)
                 {
                     orgEntity = s.Entities[0].name;
+                    
                 }
             }
         }
@@ -188,7 +220,38 @@ public class UnityMascaretApplication : MonoBehaviour
         action2 = new CallProcedureAction();
         ((CallProcedureAction)(action2)).Procedure = procedure;
         ((CallProcedureAction)(action2)).OrganisationalEntity = orgEntity;
-        BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
+        procedureBehaviorExecution = (CallProcedureBehaviorExecution)BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
+
+        Debug.Log("startProcedure #########################################################################");
+    }
+
+    private void launchProcedure(string procedure)
+    {
+        string orgEntity = null;
+
+        List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
+        foreach (OrganisationalStructure s in structs)
+        {
+            List<Procedure> procs = s.Procedures;
+            foreach (Procedure p in procs)
+            {
+                if (p.name == procedure)
+                {
+                    orgEntity = s.Entities[0].name;
+
+                }
+            }
+        }
+        Debug.Log("RUNNING : " + procedure + " / " + orgEntity);
+        List<Entity> entities = MascaretApplication.Instance.getEnvironment().getEntities();
+        Entity entity = entities[0];
+        Action action2 = null;
+        action2 = new CallProcedureAction();
+        ((CallProcedureAction)(action2)).Procedure = procedure;
+        ((CallProcedureAction)(action2)).OrganisationalEntity = orgEntity;
+        procedureBehaviorExecution = (CallProcedureBehaviorExecution)BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
+
+        Debug.Log("startProcedure #########################################################################");
     }
 
 	

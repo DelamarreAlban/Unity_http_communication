@@ -45,7 +45,9 @@
 
     <Interactions>
 
-        <CallProcedure name="moveProcedure" organisation="org" peripheric="keyboard" button="B" pressed="true" target="null"/>
+        <!-- <CallProcedure name="moveProcedure" organisation="org" peripheric="keyboard" button="M" pressed="true" target="null"/>
+        <CallProcedure name="jumpProcedure" organisation="org" peripheric="keyboard" button="J" pressed="true" target="null"/>
+        <CallProcedure name="MoveJump" organisation="org" peripheric="keyboard" button="B" pressed="true" target="null"/> -->
     </Interactions>
 
     <Navigation type="camera" mode="free">

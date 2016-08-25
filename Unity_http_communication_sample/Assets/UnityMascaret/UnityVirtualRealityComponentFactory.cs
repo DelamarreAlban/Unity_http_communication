@@ -9,10 +9,7 @@ using System.IO;
 
 public class UnityVirtualRealityComponentFactory : VirtualRealityComponentFactory {
 
-
-
-	
-	public override ShapeSpecification createShape(string name, string url, bool movable=true,bool recursive =false,string shader="")
+    public override ShapeSpecification createShape(string name, string url, bool movable=true,bool recursive =false,string shader="")
 	{
 		ShapeSpecification shape = new UnityShapeSpecification(name, url, movable, recursive, shader);
 		return shape;

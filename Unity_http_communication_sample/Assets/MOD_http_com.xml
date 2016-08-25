@@ -1,51 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LocalProfile="http:///schemas/LocalProfile/_vrh6a2krEea0fqWLv0EaNg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/LocalProfile/_vrh6a2krEea0fqWLv0EaNg/0 LocalProfile.profile.xmi#_vrihZ2krEea0fqWLv0EaNg">
-  <uml:Model xmi:id="_vrh6UGkrEea0fqWLv0EaNg" name="httpcommunication">
-    <eAnnotations xmi:id="_vrh6UWkrEea0fqWLv0EaNg" source="Objing">
-      <contents xmi:type="uml:Property" xmi:id="_vrh6UmkrEea0fqWLv0EaNg" name="exporterVersion">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vrh6U2krEea0fqWLv0EaNg" value="3.0.0"/>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LocalProfile="http:///schemas/LocalProfile/_v7-OgGr2EeaEPvs4GGAMmQ/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/LocalProfile/_v7-OgGr2EeaEPvs4GGAMmQ/0 LocalProfile.profile.xmi#_v8ADt2r2EeaEPvs4GGAMmQ">
+  <uml:Model xmi:id="_v74u8Gr2EeaEPvs4GGAMmQ" name="httpcommunication">
+    <eAnnotations xmi:id="_v74u8Wr2EeaEPvs4GGAMmQ" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_v74u8mr2EeaEPvs4GGAMmQ" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_v74u82r2EeaEPvs4GGAMmQ" value="3.0.0"/>
       </contents>
     </eAnnotations>
-    <packagedElement xmi:type="uml:Package" xmi:id="_vrh6VGkrEea0fqWLv0EaNg" name="Httpcommunication">
-      <packagedElement xmi:type="uml:Package" xmi:id="_vrh6VWkrEea0fqWLv0EaNg" name="Environment"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_vrh6VmkrEea0fqWLv0EaNg" name="Organisation">
-        <packagedElement xmi:type="uml:Interface" xmi:id="_vrh6V2krEea0fqWLv0EaNg" name="CapsuleR" isAbstract="true">
-          <ownedOperation xmi:id="_vrh6WGkrEea0fqWLv0EaNg" name="Move" visibility="public" redefinedOperation="_vrh6XGkrEea0fqWLv0EaNg"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_v74u9Gr2EeaEPvs4GGAMmQ" name="Httpcommunication">
+      <packagedElement xmi:type="uml:Package" xmi:id="_v74u9Wr2EeaEPvs4GGAMmQ" name="Environment"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_v74u9mr2EeaEPvs4GGAMmQ" name="Organisation">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_v74u92r2EeaEPvs4GGAMmQ" name="CapsuleR" isAbstract="true">
+          <ownedOperation xmi:id="_v74u-Gr2EeaEPvs4GGAMmQ" name="Move" visibility="public" redefinedOperation="_v74u_Wr2EeaEPvs4GGAMmQ"/>
+          <ownedOperation xmi:id="_v74u-Wr2EeaEPvs4GGAMmQ" name="Jump" visibility="public" redefinedOperation="_v74u_mr2EeaEPvs4GGAMmQ"/>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_vrh6WWkrEea0fqWLv0EaNg" name="Agent">
-        <packagedElement xmi:type="uml:Class" xmi:id="_vrh6WmkrEea0fqWLv0EaNg" name="Capsule_Agent" clientDependency="_vrh6W2krEea0fqWLv0EaNg">
-          <interfaceRealization xmi:id="_vrh6W2krEea0fqWLv0EaNg" name="InterfaceRealization" supplier="_vrh6V2krEea0fqWLv0EaNg" client="_vrh6WmkrEea0fqWLv0EaNg" contract="_vrh6V2krEea0fqWLv0EaNg"/>
-          <ownedOperation xmi:id="_vrh6XGkrEea0fqWLv0EaNg" name="Move" visibility="public"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_v74u-mr2EeaEPvs4GGAMmQ" name="Agent">
+        <packagedElement xmi:type="uml:Class" xmi:id="_v74u-2r2EeaEPvs4GGAMmQ" name="Capsule_Agent" clientDependency="_v74u_Gr2EeaEPvs4GGAMmQ">
+          <interfaceRealization xmi:id="_v74u_Gr2EeaEPvs4GGAMmQ" name="InterfaceRealization" supplier="_v74u92r2EeaEPvs4GGAMmQ" client="_v74u-2r2EeaEPvs4GGAMmQ" contract="_v74u92r2EeaEPvs4GGAMmQ"/>
+          <ownedOperation xmi:id="_v74u_Wr2EeaEPvs4GGAMmQ" name="Move" visibility="public"/>
+          <ownedOperation xmi:id="_v74u_mr2EeaEPvs4GGAMmQ" name="Jump" visibility="public"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_vrh6XWkrEea0fqWLv0EaNg" name="Pedagogy"/>
-    <packagedElement xmi:type="uml:Package" xmi:id="_vrh6XmkrEea0fqWLv0EaNg" name="Scenario">
-      <packagedElement xmi:type="uml:Collaboration" xmi:id="_vrh6X2krEea0fqWLv0EaNg" name="Team">
-        <ownedBehavior xmi:type="uml:Activity" xmi:id="_vrh6YGkrEea0fqWLv0EaNg" name="moveProcedure">
-          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_vrh6YWkrEea0fqWLv0EaNg" name="locals"/>
-          <node xmi:type="uml:CallOperationAction" xmi:id="_vrh6YmkrEea0fqWLv0EaNg" name="Move" outgoing="_vrh6ZWkrEea0fqWLv0EaNg" incoming="_vrh6Z2krEea0fqWLv0EaNg" inPartition="_vrh6aWkrEea0fqWLv0EaNg" operation="_vrh6WGkrEea0fqWLv0EaNg"/>
-          <node xmi:type="uml:InitialNode" xmi:id="_vrh6Y2krEea0fqWLv0EaNg" name="Initial Node" outgoing="_vrh6Z2krEea0fqWLv0EaNg" inPartition="_vrh6aWkrEea0fqWLv0EaNg"/>
-          <node xmi:type="uml:ActivityFinalNode" xmi:id="_vrh6ZGkrEea0fqWLv0EaNg" name="Activity Final Node" incoming="_vrh6ZWkrEea0fqWLv0EaNg" inPartition="_vrh6aWkrEea0fqWLv0EaNg"/>
-          <edge xmi:type="uml:ControlFlow" xmi:id="_vrh6ZWkrEea0fqWLv0EaNg" name="ControlFlow" source="_vrh6YmkrEea0fqWLv0EaNg" target="_vrh6ZGkrEea0fqWLv0EaNg">
-            <weight xmi:type="uml:LiteralInteger" xmi:id="_vrh6ZmkrEea0fqWLv0EaNg" value="1"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_v74u_2r2EeaEPvs4GGAMmQ" name="Pedagogy"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_v74vAGr2EeaEPvs4GGAMmQ" name="Scenario">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_v74vAWr2EeaEPvs4GGAMmQ" name="Team">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_v75WAGr2EeaEPvs4GGAMmQ" name="moveProcedure">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_v75WAWr2EeaEPvs4GGAMmQ" name="locals"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_v75WAmr2EeaEPvs4GGAMmQ" name="Move" outgoing="_v75WBWr2EeaEPvs4GGAMmQ" incoming="_v75WB2r2EeaEPvs4GGAMmQ" inPartition="_v75WCWr2EeaEPvs4GGAMmQ" operation="_v74u-Gr2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_v75WA2r2EeaEPvs4GGAMmQ" name="Initial Node" outgoing="_v75WB2r2EeaEPvs4GGAMmQ" inPartition="_v75WCWr2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_v75WBGr2EeaEPvs4GGAMmQ" name="Activity Final Node" incoming="_v75WBWr2EeaEPvs4GGAMmQ" inPartition="_v75WCWr2EeaEPvs4GGAMmQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WBWr2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WAmr2EeaEPvs4GGAMmQ" target="_v75WBGr2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WBmr2EeaEPvs4GGAMmQ" value="1"/>
           </edge>
-          <edge xmi:type="uml:ControlFlow" xmi:id="_vrh6Z2krEea0fqWLv0EaNg" name="ControlFlow" source="_vrh6Y2krEea0fqWLv0EaNg" target="_vrh6YmkrEea0fqWLv0EaNg">
-            <weight xmi:type="uml:LiteralInteger" xmi:id="_vrh6aGkrEea0fqWLv0EaNg" value="1"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WB2r2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WA2r2EeaEPvs4GGAMmQ" target="_v75WAmr2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WCGr2EeaEPvs4GGAMmQ" value="1"/>
           </edge>
-          <group xmi:type="uml:ActivityPartition" xmi:id="_vrh6aWkrEea0fqWLv0EaNg" name="Ralph" node="_vrh6YmkrEea0fqWLv0EaNg _vrh6Y2krEea0fqWLv0EaNg _vrh6ZGkrEea0fqWLv0EaNg" represents="_vrh6amkrEea0fqWLv0EaNg"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_v75WCWr2EeaEPvs4GGAMmQ" name="Ralph" node="_v75WAmr2EeaEPvs4GGAMmQ _v75WA2r2EeaEPvs4GGAMmQ _v75WBGr2EeaEPvs4GGAMmQ" represents="_v75WIWr2EeaEPvs4GGAMmQ"/>
         </ownedBehavior>
-        <ownedAttribute xmi:id="_vrh6amkrEea0fqWLv0EaNg" name="Ralph" type="_vrh6V2krEea0fqWLv0EaNg" aggregation="composite"/>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_v75WCmr2EeaEPvs4GGAMmQ" name="jumpProcedure">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_v75WC2r2EeaEPvs4GGAMmQ" name="locals"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_v75WDGr2EeaEPvs4GGAMmQ" name="Initial Node" outgoing="_v75WD2r2EeaEPvs4GGAMmQ" inPartition="_v75WE2r2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_v75WDWr2EeaEPvs4GGAMmQ" name="Jump" outgoing="_v75WEWr2EeaEPvs4GGAMmQ" incoming="_v75WD2r2EeaEPvs4GGAMmQ" inPartition="_v75WE2r2EeaEPvs4GGAMmQ" operation="_v74u-Wr2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_v75WDmr2EeaEPvs4GGAMmQ" name="Activity Final Node" incoming="_v75WEWr2EeaEPvs4GGAMmQ" inPartition="_v75WE2r2EeaEPvs4GGAMmQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WD2r2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WDGr2EeaEPvs4GGAMmQ" target="_v75WDWr2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WEGr2EeaEPvs4GGAMmQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WEWr2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WDWr2EeaEPvs4GGAMmQ" target="_v75WDmr2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WEmr2EeaEPvs4GGAMmQ" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_v75WE2r2EeaEPvs4GGAMmQ" name="Ralph" node="_v75WDGr2EeaEPvs4GGAMmQ _v75WDWr2EeaEPvs4GGAMmQ _v75WDmr2EeaEPvs4GGAMmQ" represents="_v75WIWr2EeaEPvs4GGAMmQ"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_v75WFGr2EeaEPvs4GGAMmQ" name="MoveJump">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_v75WFWr2EeaEPvs4GGAMmQ" name="locals"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_v75WFmr2EeaEPvs4GGAMmQ" name="Initial Node" outgoing="_v75WGmr2EeaEPvs4GGAMmQ" inPartition="_v75WIGr2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_v75WF2r2EeaEPvs4GGAMmQ" name="Activity Final Node" incoming="_v75WHmr2EeaEPvs4GGAMmQ" inPartition="_v75WIGr2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:CallBehaviorAction" xmi:id="_v75WGGr2EeaEPvs4GGAMmQ" name="moveProcedure" outgoing="_v75WHGr2EeaEPvs4GGAMmQ" incoming="_v75WGmr2EeaEPvs4GGAMmQ" inPartition="_v75WIGr2EeaEPvs4GGAMmQ" behavior="_v75WAGr2EeaEPvs4GGAMmQ"/>
+          <node xmi:type="uml:CallBehaviorAction" xmi:id="_v75WGWr2EeaEPvs4GGAMmQ" name="jumpProcedure" outgoing="_v75WHmr2EeaEPvs4GGAMmQ" incoming="_v75WHGr2EeaEPvs4GGAMmQ" inPartition="_v75WIGr2EeaEPvs4GGAMmQ" behavior="_v75WCmr2EeaEPvs4GGAMmQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WGmr2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WFmr2EeaEPvs4GGAMmQ" target="_v75WGGr2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WG2r2EeaEPvs4GGAMmQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WHGr2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WGGr2EeaEPvs4GGAMmQ" target="_v75WGWr2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WHWr2EeaEPvs4GGAMmQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_v75WHmr2EeaEPvs4GGAMmQ" name="ControlFlow" source="_v75WGWr2EeaEPvs4GGAMmQ" target="_v75WF2r2EeaEPvs4GGAMmQ">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_v75WH2r2EeaEPvs4GGAMmQ" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_v75WIGr2EeaEPvs4GGAMmQ" name="Ralph" node="_v75WFmr2EeaEPvs4GGAMmQ _v75WF2r2EeaEPvs4GGAMmQ _v75WGGr2EeaEPvs4GGAMmQ _v75WGWr2EeaEPvs4GGAMmQ" represents="_v75WIWr2EeaEPvs4GGAMmQ"/>
+        </ownedBehavior>
+        <ownedAttribute xmi:id="_v75WIWr2EeaEPvs4GGAMmQ" name="Ralph" type="_v74u92r2EeaEPvs4GGAMmQ" aggregation="composite"/>
       </packagedElement>
     </packagedElement>
-    <profileApplication xmi:id="_vrmLwGkrEea0fqWLv0EaNg">
-      <eAnnotations xmi:id="_vrmy0GkrEea0fqWLv0EaNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="LocalProfile.profile.xmi#_vrihZ2krEea0fqWLv0EaNg"/>
+    <profileApplication xmi:id="_v8OtMGr2EeaEPvs4GGAMmQ">
+      <eAnnotations xmi:id="_v8P7UGr2EeaEPvs4GGAMmQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="LocalProfile.profile.xmi#_v8ADt2r2EeaEPvs4GGAMmQ"/>
       </eAnnotations>
-      <appliedProfile href="LocalProfile.profile.xmi#_vrihYGkrEea0fqWLv0EaNg"/>
+      <appliedProfile href="LocalProfile.profile.xmi#_v8ADsGr2EeaEPvs4GGAMmQ"/>
     </profileApplication>
   </uml:Model>
-  <LocalProfile:Role xmi:id="_vrmy0WkrEea0fqWLv0EaNg" base_Interface="_vrh6V2krEea0fqWLv0EaNg"/>
-  <LocalProfile:VirtualHuman xmi:id="_vrmy0mkrEea0fqWLv0EaNg" base_Class="_vrh6WmkrEea0fqWLv0EaNg"/>
+  <LocalProfile:Role xmi:id="_v8TlsGr2EeaEPvs4GGAMmQ" base_Interface="_v74u92r2EeaEPvs4GGAMmQ"/>
+  <LocalProfile:VirtualHuman xmi:id="_v8TlsWr2EeaEPvs4GGAMmQ" base_Class="_v74u-2r2EeaEPvs4GGAMmQ"/>
 </xmi:XMI>
