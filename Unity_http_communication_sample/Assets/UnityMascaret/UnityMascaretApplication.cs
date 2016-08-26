@@ -13,6 +13,7 @@ public class UnityMascaretApplication : MonoBehaviour
 	public TextAsset envFile;
 
     private CallProcedureBehaviorExecution procedureBehaviorExecution;
+    private ProcedureExecution motherProcedure;
 
     #region Useless
     [HideInInspector]
@@ -30,6 +31,9 @@ public class UnityMascaretApplication : MonoBehaviour
     #endregion
 
 	public bool loadAll = true;
+
+    private bool acquiredCPBE = false;
+    private bool acquiredmother = false;
 
     private MascaretUnityActionRecorder actionRecorder;
 
@@ -109,12 +113,33 @@ public class UnityMascaretApplication : MonoBehaviour
 
         if (procedureBehaviorExecution != null)
         {
-            if (procedureBehaviorExecution.IsFinished)
+            if (procedureBehaviorExecution.IsFinished && !acquiredCPBE)
             {
-                actionRecorder.getProcedureExecutions(procedureBehaviorExecution);
+                
+                actionRecorder.getProcedureExecution(procedureBehaviorExecution);
+                acquiredCPBE = true;
+                //if (procedureBehaviorExecution.ProceduralBehavior.RunningProcedures[0].isFinished())
             }
+            if (acquiredCPBE)
+            {
+                if (!acquiredmother)
+                {
+                    motherProcedure = actionRecorder.motherProcedure;
+                    acquiredmother = true;
+                }
+                if (motherProcedure.isFinished())
+                {
+                    Debug.Log("FINISHED!!");
+                }
+                else
+                {
+                    actionRecorder.getProceduresToRecord();
+                }
+            }
+            
         }
 
+        
         
 	}
 
@@ -195,7 +220,6 @@ public class UnityMascaretApplication : MonoBehaviour
 
     private void startProcedure(string procedure)
     {
-        actionRecorder.setRunningProcedureName(procedure);
         string orgEntity = null;
 
         List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;

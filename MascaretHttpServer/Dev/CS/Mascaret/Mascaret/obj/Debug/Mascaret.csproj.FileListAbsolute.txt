@@ -193,3 +193,21 @@ C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretWebGL\Dev\CS\Mas
 C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretWebGL\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.dll
 C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretWebGL\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.pdb
 C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretWebGL\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.csprojResolveAssemblyReference.cache
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Mascaret.dll
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Mascaret.pdb
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Antlr4.Runtime.net35.dll
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Antlr4.Runtime.net35.xml
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.csprojResolveAssemblyReference.cache
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.dll
+C:\Users\Cerberus\Documents\Visual Studio 2015\Projects\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.pdb
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Mascaret.dll
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Mascaret.pdb
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Antlr4.Runtime.net35.dll
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\bin\Debug\Antlr4.Runtime.net35.xml
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.csprojResolveAssemblyReference.cache
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.dll
+C:\Users\Cerberus\Documents\Unity Project\unity_http_communication\MascaretHttpServer\Dev\CS\Mascaret\Mascaret\obj\Debug\Mascaret.pdb

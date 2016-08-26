@@ -9,11 +9,19 @@ namespace Mascaret
         public List<InstanceSpecification> _signals = new List<InstanceSpecification>();
  
         public bool ispause = false;
-        public List<ProcedureExecution> runningProcedures = new List<ProcedureExecution>();
+        private List<ProcedureExecution> runningProcedures = new List<ProcedureExecution>();
         public List<ActionNode> actionsToDo = new List<ActionNode>();
         public Dictionary<BehaviorExecution, ActionNode> behaviorToNode = new Dictionary<BehaviorExecution,ActionNode>();
 
-       // StreamWriter file = MascaretApplication.Instance.logfile;
+        public List<ProcedureExecution> RunningProcedures
+        {
+            get
+            {
+                return runningProcedures;
+            }
+        }
+
+        // StreamWriter file = MascaretApplication.Instance.logfile;
 
 
         public ProceduralBehavior(Behavior behavior, InstanceSpecification host, Dictionary<String, ValueSpecification> p)
@@ -44,14 +52,16 @@ namespace Mascaret
                 }
             }
 
-            runningProcedures.Add(procInfo);
+            //MascaretApplication.Instance.VRComponentFactory.Log(filename + " PARSE INSTANCE LOADER : " + s);
+
+            RunningProcedures.Add(procInfo);
             ispause = false;
 
             if (!found)
             {
                 //inform all agents that this agent's role in this procedure has ended (used to unblock tokens in ProcedureExecution)
                 sendProcedureDoneMessage(procInfo);
-                runningProcedures.RemoveAt(runningProcedures.Count - 1); //remove it..
+                RunningProcedures.RemoveAt(RunningProcedures.Count - 1); //remove it..
                 // ispause = true;
             }
         }
@@ -64,12 +74,12 @@ namespace Mascaret
            // StreamWriter file = MascaretApplication.Instance.logfile;
             //file.WriteLine("NB PRocs : " + runningProcedures.Count); file.Flush();
 
-            if (runningProcedures.Count > 0)
+            if (RunningProcedures.Count > 0)
             {
-                for (int iP = 0; iP < runningProcedures.Count; iP++)
+                for (int iP = 0; iP < RunningProcedures.Count; iP++)
                 {
                    // file.WriteLine("ProceduralBehavior in procedure " + runningProcedures[iP].procedure.name); file.Flush();
-                    ProcedureExecution procInfo = runningProcedures[iP];
+                    ProcedureExecution procInfo = RunningProcedures[iP];
                     List<ActionNode> actionNodes = new List<ActionNode>();
 
                     //remove those which are not agreed upon
@@ -157,8 +167,8 @@ namespace Mascaret
                         //inform all agents that this agent's role in this procedure has ended (used to unblock tokens in ProcedureExecution)
                         sendProcedureDoneMessage(procInfo);
 
-                        runningProcedures[iP] = runningProcedures[runningProcedures.Count - 1];
-                        runningProcedures.RemoveAt(runningProcedures.Count - 1);
+                        RunningProcedures[iP] = RunningProcedures[RunningProcedures.Count - 1];
+                        RunningProcedures.RemoveAt(RunningProcedures.Count - 1);
                         //cerr << getHost()->getName()<<" : suppression de la procedure"<< endl;
                     }
                     else
@@ -177,9 +187,9 @@ namespace Mascaret
     public void stop(string procedureName)
     {
 	    List<ProcedureExecution> exec = new List<ProcedureExecution>(); // Procedure still running
-	    for (int iP = 0; iP < runningProcedures.Count; iP++)
+	    for (int iP = 0; iP < RunningProcedures.Count; iP++)
 	    {
-		    ProcedureExecution procInfo = runningProcedures[iP];
+		    ProcedureExecution procInfo = RunningProcedures[iP];
 		    if (procInfo.procedure.name == procedureName)
 		    {
 			    procInfo.stop();
@@ -191,17 +201,17 @@ namespace Mascaret
 	    }
 
 	    // We put back still running procedure in the vector
-	    runningProcedures.Clear();
+	    RunningProcedures.Clear();
 	    for (int iP = 0; iP < exec.Count ; iP++)
-		    runningProcedures.Add(exec[iP]);
+		    RunningProcedures.Add(exec[iP]);
     }
 
     public void stop(Procedure procedure)
     {
 	    List<ProcedureExecution> exec = new List<ProcedureExecution>(); // Procedure still running
-	    for (int iP = 0; iP < runningProcedures.Count; iP++)
+	    for (int iP = 0; iP < RunningProcedures.Count; iP++)
 	    {
-		    ProcedureExecution procInfo = runningProcedures[iP];
+		    ProcedureExecution procInfo = RunningProcedures[iP];
 		    if (procInfo.procedure == procedure)
 		    {
 			    procInfo.stop();
@@ -213,26 +223,26 @@ namespace Mascaret
 	    }
 
 	    // We put back still running procedure in the vector
-	    runningProcedures.Clear();
+	    RunningProcedures.Clear();
 	    for (int iP = 0; iP < exec.Count ; iP++)
-		    runningProcedures.Add(exec[iP]);
+		    RunningProcedures.Add(exec[iP]);
     }
         
     public void stopAll()
     {
-	    for (int iP = 0; iP < runningProcedures.Count; iP++)
+	    for (int iP = 0; iP < RunningProcedures.Count; iP++)
 	    {
-		    ProcedureExecution procInfo = runningProcedures[iP];
+		    ProcedureExecution procInfo = RunningProcedures[iP];
 		    procInfo.stop();
 	    }
-	    runningProcedures.Clear();
+	    RunningProcedures.Clear();
     }
         
         public void onBehaviorStop(BehaviorExecution be)
         {
-            for (int iP = 0; iP < runningProcedures.Count; iP++)
+            for (int iP = 0; iP < RunningProcedures.Count; iP++)
             {
-                ProcedureExecution procInfo = runningProcedures[iP];
+                ProcedureExecution procInfo = RunningProcedures[iP];
                 procInfo.informActionDone(((Agent)(this.Host)).Aid, behaviorToNode[be]);
                 sendActionDoneMessage(behaviorToNode[be], procInfo);
             }
@@ -243,9 +253,9 @@ namespace Mascaret
 
         public void onActionDone(AID agent, ActionNode action)
         {
-	        for (int iP = 0; iP < runningProcedures.Count;iP++ )
+	        for (int iP = 0; iP < RunningProcedures.Count;iP++ )
 	        {
-		        ProcedureExecution procInfo = runningProcedures[iP];
+		        ProcedureExecution procInfo = RunningProcedures[iP];
 
 		        procInfo.informActionDone(agent,action);
 	        }
@@ -254,9 +264,9 @@ namespace Mascaret
 
         public void onActionDone(AID agent, string actionName)
         {
-	        for (int iP = 0; iP < runningProcedures.Count;iP++ )
+	        for (int iP = 0; iP < RunningProcedures.Count;iP++ )
 	        {
-		        ProcedureExecution procInfo = runningProcedures[iP];
+		        ProcedureExecution procInfo = RunningProcedures[iP];
 		
 		        procInfo.informActionDone(agent,actionName);
 	        }
@@ -264,9 +274,9 @@ namespace Mascaret
 
         public void onActionRunning(AID agent, ActionNode action)
         {
-	        for (int iP = 0; iP < runningProcedures.Count;iP++ )
+	        for (int iP = 0; iP < RunningProcedures.Count;iP++ )
 	        {
-		        ProcedureExecution procInfo = runningProcedures[iP];
+		        ProcedureExecution procInfo = RunningProcedures[iP];
 		
 		        procInfo.informActionRunning(agent,action);
 	        }
@@ -274,9 +284,9 @@ namespace Mascaret
 
         public void onActionRunning(AID agent, string actionName)
         {
-	        for (int iP = 0; iP < runningProcedures.Count;iP++ )
+	        for (int iP = 0; iP < RunningProcedures.Count;iP++ )
 	        {
-		        ProcedureExecution procInfo = runningProcedures[iP];
+		        ProcedureExecution procInfo = RunningProcedures[iP];
 		
 		        procInfo.informActionRunning(agent,actionName);
 	        }

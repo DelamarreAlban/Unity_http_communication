@@ -6,20 +6,15 @@ using System.Collections.Generic;
 public class MascaretUnityActionRecorder {
 
     List<Agent> Agents = new List<Agent>();
-    List<Procedure> procs = new List<Procedure>();
-    List<ProcedureExecution> runningProcedures = new List<ProcedureExecution>();
+    public List<ProcedureExecution> recordedRunningProcedures = new List<ProcedureExecution>();
 
-    ProceduralBehavior pb;
-    public ProcedureExecution procExe;
+    List<ActionNode> allActions = new List<ActionNode>();
 
-    bool currentProcFound = false;
+    List<ActionNode> recordedActions = new List<ActionNode>();
+    CallProcedureBehaviorExecution procedureBehaviorExecution;
 
-    string runningProcedureName = "";
-
-
-
-    CallProcedureBehaviorExecution motherProcedure;
-
+    public ProcedureExecution motherProcedure;
+    bool motherProcedureAcquired = false;
 
     public MascaretUnityActionRecorder(AgentPlateform agentPlatform)
     {
@@ -35,103 +30,99 @@ public class MascaretUnityActionRecorder {
             {
                 Agents.Add(a.Value);
                 Debug.Log("Agent to record : " + a.Key);
-                /*if(a.Value.getBehaviorExecutingByName("ProceduralBehavior") != null)
-                {
-                    Debug.Log("ProceduralBehavior found");
-                    Debug.Log(((ProceduralBehavior)a.Value.getBehaviorExecutingByName("ProceduralBehavior")).RunningProcedures.Count);
-                    
-                }*/
-                /*foreach(Behavior b in a.Value.Behaviors)
-                {
-                    Debug.Log("Behavior : " + b.ToString() + " type : " + b.GetType());
-                }*/
             }
         }
     }
 
-    public void setRunningProcedureName(string name)
+    public void getProcedureExecution(CallProcedureBehaviorExecution cpbe)
     {
-        runningProcedureName = name;
+        procedureBehaviorExecution = cpbe;
     }
 
-    public void getProcedureExecutions(CallProcedureBehaviorExecution cpbe)
+    //Record all different procedures
+    public void getProceduresToRecord()
     {
-        runningProcedures = cpbe.ProceduralBehavior.RunningProcedures;
-
-        foreach(ProcedureExecution pe in runningProcedures)
+        if(procedureBehaviorExecution.ProceduralBehavior.RunningProcedures[0] != null && !motherProcedureAcquired)
         {
-            procExe = pe;
-            if (procExe != null)
+            motherProcedureAcquired = true;
+            motherProcedure = procedureBehaviorExecution.ProceduralBehavior.RunningProcedures[0];
+        }
+        for(int i = 1;i < procedureBehaviorExecution.ProceduralBehavior.RunningProcedures.Count;i++ )
+        {
+            ProcedureExecution pe = procedureBehaviorExecution.ProceduralBehavior.RunningProcedures[i];
+            if (pe != null && !recordedRunningProcedures.Contains(pe))
             {
-                Debug.Log("ALL ACTION  " + procExe.procedure.name);
+                Debug.Log("Added procedure execution : " + pe.procedure.name);
+                recordedRunningProcedures.Add(pe);
+            }
+        }
+    }
+
+    public List<ActionNode> getActionNodesFromProcedure(ProcedureExecution procedure)
+    {
+        List<ActionNode> actionNodes = new List<ActionNode>();
+        foreach(ActionNode n in procedure.getAllActions())
+        {
+            if (n.Kind == "CallBehavior")
+            {
+            }
+            else
+            {
+                actionNodes.Add(n);
+                Debug.Log("action  : " + n.name + "      kind : " + n.Action.Kind);
+            }
+        }
+        return actionNodes;
+    }
+
+    public void getAllActions()
+    {
+        foreach (ProcedureExecution pe in recordedRunningProcedures)
+        {
+            if (pe != null)
+            {
+                Debug.Log("ALL ACTION  " + pe.procedure.name);
+                allActions.AddRange(getActionNodesFromProcedure(pe));
+            }
+        }
+    }
+
+    public void showAllActions()
+    {
+        for (int i = 0; i < allActions.Count; i++)
+            Debug.Log("Action " + i + " : " + allActions[i].name + "    kind : " + allActions[i].Kind);
+    }
+
+    public void getAllActionsDone()
+    {
+        foreach (ProcedureExecution pe in recordedRunningProcedures)
+        {
+            if (pe != null)
+            {
+                Debug.Log("ALL ACTION  " + pe.procedure.name);
                 int i = 0;
-                foreach (ActionNode n in procExe.getAllActions())
+                foreach (ActionNode n in pe.getAllActions())
                 {
-                    Debug.Log("action " + (i++) + " : " + n.name + "      kind : " + n.Action.Kind);
+                    if(n.Kind == "CallBehavior")
+                    {
+
+                    }
+                    else
+                    {
+                        recordedActions.Add(n);
+                        Debug.Log("action " + (i++) + " : " + n.name + "      kind : " + n.Action.Kind);
+                    }
+                    
                 }
             }
         }
-        
-
-
-        //
-        //mais on veut (behavior fille):
-        //ProceduralBehavior pb = (ProceduralBehavior)be;
-
-
-        /*if (procExe == null)
-        {
-            //Debug.Log("get Procedure execution ::::::::::::::::::::::::::::::::::::");
-            List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
-            foreach (OrganisationalStructure s in structs)
-            {
-                procs = s.Procedures;
-            }
-
-            foreach (Procedure p in procs)
-            {
-                //Debug.Log("Procedure to record : " + p.name);
-                if (p.ProcedureExecution != null && p.name == procedureName)
-                {
-                    //Debug.Log("Procedure Execution found!");
-                    procExe = p.ProcedureExecution;
-                }
-            }
-        }
-
-
-        if (procExe != null)
-        {
-            Debug.Log("ALL ACTION  " + procExe.procedure.name);
-            int i = 0;
-            foreach (ActionNode n in procExe.getAllActions())
-            {
-                Debug.Log("action " + (i++) +" : " + n.name   + "      kind : " + n.Action.Kind );
-            }
-        }*/
     }
 
-    /*
-    public IEnumerator GETProcedureExecutionCoroutine()
+    public List<ActionNode> getActionFromProcedure(Procedure procedure)
     {
-        while(procExe == null)
-        {
-        }
-        yield return 0;
-        
-    }
-    */
+        List<ActionNode> actionNodes = new List<ActionNode>();
 
-    /*Debug.Log("ALL ACTION  " + pb.RunningProcedures);
-    foreach(ProcedureExecution pe in pb.RunningProcedures)
-    {
-        if (pe != null)
-        {
-            Debug.Log(pe.procedure.name);
-            foreach (ActionNode n in pe.getAllActions())
-            {
-                Debug.Log(n.name);
-            }
-        }
-    }*/
+
+        return actionNodes;
+    }
 }

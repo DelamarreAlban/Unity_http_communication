@@ -39,7 +39,7 @@ namespace Mascaret
                //     file.WriteLine("From Procedure : " + owner); file.Flush();
 
                     ProceduralBehavior pbehavior = (ProceduralBehavior)(agent.getBehaviorExecutingByName("ProceduralBehavior"));
-                    List<ProcedureExecution> runningProcedures = pbehavior.runningProcedures;
+                    List<ProcedureExecution> runningProcedures = pbehavior.RunningProcedures;
 
                //     file.WriteLine("NB Running procs : " + runningProcedures.Count); file.Flush();
                     for (int i = 0; i < runningProcedures.Count; i++)
@@ -96,7 +96,7 @@ namespace Mascaret
                     if (pbehavior != null)
                     {
                         ProceduralBehavior procBehave = (ProceduralBehavior)(pbehavior);
-                        List<ProcedureExecution> runningProcedures = procBehave.runningProcedures;
+                        List<ProcedureExecution> runningProcedures = procBehave.RunningProcedures;
                         bool foundP = false;
                         for (int iP = 0; iP < runningProcedures.Count; iP++)
                         {

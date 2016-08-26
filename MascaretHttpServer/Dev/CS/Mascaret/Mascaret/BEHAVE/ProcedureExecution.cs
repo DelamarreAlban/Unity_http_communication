@@ -503,7 +503,7 @@ namespace Mascaret
             return false;
         }
 
-        List<string> getAllActionsDoneBy(AID agent)
+        public List<string> getAllActionsDoneBy(AID agent)
         {
 	        // TODO: Maybe retyrb ActionNode and not name ?
 	        List<string> actions = new List<string>();
@@ -515,7 +515,7 @@ namespace Mascaret
 	        return actions;
         }
 
-        List<TimeExpression> getAllActionsDoneTimestampsBy(AID agent)
+        public List<TimeExpression> getAllActionsDoneTimestampsBy(AID agent)
         {
 	        return allActionsDoneTimestamps[agent.toString()];
         }
