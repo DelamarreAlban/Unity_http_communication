@@ -25,7 +25,13 @@ public class Capsule_Agent_Move : BehaviorExecution  {
         entity = GameObject.Find (entityName);
         agent = entity.GetComponent<NavMeshAgent>();
         target = GameObject.Find ("Target");
-	}
+        UnityEngine.Vector3 position = new UnityEngine.Vector3(Random.Range(-20.0f, 20.0f), 0, Random.Range(-20.0f, 20.0f));
+        position += agent.transform.position;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(position, out hit, 20.0f, 1);
+        target.transform.position = hit.position;
+
+    }
 	
 	override public double execute (double dt)
 	{

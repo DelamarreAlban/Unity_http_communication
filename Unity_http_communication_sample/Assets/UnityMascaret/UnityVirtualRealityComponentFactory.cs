@@ -43,22 +43,28 @@ public class UnityVirtualRealityComponentFactory : VirtualRealityComponentFactor
 		url = url.Remove (0, 1);
 		Debug.Log (url);
 		TextAsset file = null;
+        
 		if (url == "MAS_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().masFile;
 		if (url == "ENV_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().envFile;
 		if (url == "MOD_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().modFile;
-
-		return file.text;
+        
+        /*
+        if (url == "MAS_http_com") file = Resources.Load("MAS_http_com") as TextAsset;
+        if (url == "ENV_http_com") file = Resources.Load("ENV_http_com") as TextAsset;
+        if (url == "MOD_http_com") file = Resources.Load("MOD_http_com") as TextAsset;
+        */
+        return file.text;
 		/*
         string assetPath = url;
         
 		if (XMLFiles.ContainsKey (Path.GetExtension (url)))
 			return XMLFiles [Path.GetExtension (url)];
 		else {
-
-			#if UNITY_STANDALONE_WIN  || UNITY_EDITOR
-			assetPath = "file://" + assetPath;
-			#endif
-			if (assetPath != null) {// Load XML structure
+        */
+			//#if UNITY_STANDALONE_WIN  || UNITY_EDITOR
+			//assetPath = "file://" + assetPath;
+			//#endif
+			/*if (assetPath != null) {// Load XML structure
 				WWW configFile = new WWW (assetPath);
 				if (configFile == null) {
 					Debug.Log ("File " + assetPath + " cannot be downloaded");
@@ -79,7 +85,7 @@ public class UnityVirtualRealityComponentFactory : VirtualRealityComponentFactor
 				}
 			} else
 				return "";
-		}*/
+		//}*/
     }
 
 

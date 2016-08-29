@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xml>
+<feedback>
+<scene>
+<action>
+<entity>Ralph</entity>
+<CallOperation>ChangeColor</CallOperation>
+<CallOperation>JumpC</CallOperation>
+<CallBehavior>moveProcedure</CallBehavior>
+<CallBehavior>jumpProcedure</CallBehavior>
+<CallOperation>MoveC</CallOperation>
+<CallOperation>MoveC</CallOperation>
+</action>
+<action>
+<entity>Jack</entity>
+<CallOperation>ChangeColor</CallOperation>
+<CallOperation>MoveS</CallOperation>
+<CallOperation>JumpS</CallOperation>
+<CallOperation>JumpS</CallOperation>
+</action>
+</scene>
+</feedback>
+</xml>

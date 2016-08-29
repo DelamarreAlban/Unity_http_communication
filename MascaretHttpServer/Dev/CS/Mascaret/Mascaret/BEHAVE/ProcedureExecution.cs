@@ -515,6 +515,13 @@ namespace Mascaret
 	        return actions;
         }
 
+        public List<ActionNode> getAllActionNodesDoneBy(AID agent)
+        {
+            List<ActionNode> nodes = allActionsDone[agent.toString()];
+
+            return nodes;
+        }
+
         public List<TimeExpression> getAllActionsDoneTimestampsBy(AID agent)
         {
 	        return allActionsDoneTimestamps[agent.toString()];
@@ -633,7 +640,8 @@ namespace Mascaret
                             allActionsDone.Add(agent.toString(), new List<ActionNode>());
                         allActionsDone[agent.toString()].Add(doneAction);
 
-                        MascaretApplication.Instance.VRComponentFactory.Log("allActionsDoneTimestamps : " + agent.toString());
+                        //ALBAN
+                        MascaretApplication.Instance.VRComponentFactory.Log("allActionsDoneTimestamps : " + agent.toString()  + "      time : "    + doneAction.CurrentExecution.Finish);
                         if (!allActionsDoneTimestamps.ContainsKey(agent.toString()))
                             allActionsDoneTimestamps.Add(agent.toString(),new List<TimeExpression>());
                         allActionsDoneTimestamps[agent.toString()].Add( doneAction.CurrentExecution.Finish);

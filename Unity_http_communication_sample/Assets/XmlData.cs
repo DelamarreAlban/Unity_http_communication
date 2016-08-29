@@ -24,6 +24,10 @@ public class XmlData
     public string saveStringToXml(string name, string stringToXml)
     {
         string url = Application.dataPath + @"\" + name + ".xml";
+        if (File.Exists(Application.dataPath + @"\" + name + ".xml"))
+        {
+            File.Delete(Application.dataPath + @"\" + name + ".xml");
+        }
         System.IO.File.WriteAllText (url, stringToXml);
         Debug.Log("Writting file at " + Application.dataPath + @"\" + name + ".xml");
 

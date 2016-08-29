@@ -102,7 +102,6 @@ namespace Mascaret
 
                     XDocument parser;
                     this.basedir = filename;
-
                     //parser = XDocument.Load(filename);
                     String s = MascaretApplication.Instance.readFlow(filename);
                     MascaretApplication.Instance.VRComponentFactory.Log(filename + " PARSE INSTANCE LOADER : " + s);

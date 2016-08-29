@@ -32,10 +32,13 @@ public class UnityMascaretApplication : MonoBehaviour
 
 	public bool loadAll = true;
 
+    private XmlData xmlHandler;
     private bool acquiredCPBE = false;
     private bool acquiredmother = false;
-
+    private bool posted = false;
     private MascaretUnityActionRecorder actionRecorder;
+    private httpRequest requestHandler;
+    public string url = "http://localhost:8888";
 
 
     private VRApplication m_Mascaret;
@@ -52,8 +55,14 @@ public class UnityMascaretApplication : MonoBehaviour
 
 	void Awake()
 	{
-		// Initialisation of Mascaret
-		m_Mascaret = VRApplication.Instance;
+        // Initialisation of Mascaret
+        requestHandler = new httpRequest();
+        xmlHandler = new XmlData();
+        /*string xmlFile = requestHandler.GET(url + "/ignition");
+        xmlHandler.saveStringToXml("Resources"+@"/MOD_http_com", xmlFile);
+        modFile = Resources.Load("MOD_http_com") as TextAsset;
+        */
+        m_Mascaret = VRApplication.Instance;
 		m_Mascaret.window = new UnityWindow3D();
 		m_Mascaret.VRComponentFactory = new UnityVirtualRealityComponentFactory();
 		m_Mascaret.window.addPeripheric(new UnityKeyboard());
@@ -67,16 +76,16 @@ public class UnityMascaretApplication : MonoBehaviour
         m_Mascaret.parse(m_ApplicationFile, "", loadAll);
 
         actionRecorder = new MascaretUnityActionRecorder(m_Mascaret.AgentPlateform);
-        
+
         //m_Mascaret.parse(m_ApplicationFile, Application.streamingAssetsPath + m_BaseDir + "/", loadAll);
 
     }
 
 	void Start()
 	{
+        
 
-		
-		tech = GameObject.Find("char_avatar_h_parent_MESH");
+        tech = GameObject.Find("char_avatar_h_parent_MESH");
         if (showmenu)
         {
         }
@@ -100,6 +109,10 @@ public class UnityMascaretApplication : MonoBehaviour
         {
             launchProcedure("moveProcedure");
         }
+        if (Input.GetKeyDown("2"))
+        {
+            launchProcedure("move2Procedure");
+        }
 
         if (Input.GetKeyDown("j"))
         {
@@ -115,25 +128,41 @@ public class UnityMascaretApplication : MonoBehaviour
         {
             if (procedureBehaviorExecution.IsFinished && !acquiredCPBE)
             {
-                
+                Debug.Log("Acquired CPBE");
                 actionRecorder.getProcedureExecution(procedureBehaviorExecution);
                 acquiredCPBE = true;
                 //if (procedureBehaviorExecution.ProceduralBehavior.RunningProcedures[0].isFinished())
             }
+            
             if (acquiredCPBE)
             {
                 if (!acquiredmother)
                 {
-                    motherProcedure = actionRecorder.motherProcedure;
-                    acquiredmother = true;
-                }
-                if (motherProcedure.isFinished())
-                {
-                    Debug.Log("FINISHED!!");
-                }
-                else
-                {
                     actionRecorder.getProceduresToRecord();
+                    if (actionRecorder.motherProcedure != null)
+                    {
+                        Debug.Log("mother procedure acquired");
+                        motherProcedure = actionRecorder.motherProcedure;
+                        acquiredmother = true;
+                    }
+                }else {
+                    if (motherProcedure.isFinished())
+                    {
+                        //Debug.Log("FINISHED!!");
+                        //actionRecorder.showAllActions();
+                        if(!posted)
+                        {
+                            actionRecorder.getAllActionsDone();
+                            string xmlFilePath = actionRecorder.publishRecordedActions();
+                            requestHandler.POST("xml", url, xmlFilePath);
+                            Debug.Log("POSTED!!");
+                            posted = true;
+                        }
+                    }
+                    else
+                    {
+                        actionRecorder.getProceduresToRecord();
+                    }
                 }
             }
             

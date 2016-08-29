@@ -146,12 +146,15 @@ namespace Mascaret
                 _jumpToNext();
                 _updateCurrentVirtualTime();
                 //Debug.Log(" ############################################################################ ");
+                //MascaretApplication.Instance.VRComponentFactory.Log(" ############################################################################ ");
                 while (behaviors.Count > 0)
                 {
 
                     TimeExpression virtualTime = currentVirtualTime;
                     SchedInfo si = behaviors.First.Value;
                     //Debug.Log("Comparing : " + si.nextTime.TimeExp + " : " + virtualTime.TimeExp);
+                    //MascaretApplication.Instance.VRComponentFactory.Log("Comparing : " + si.nextTime.TimeExp + " : " + virtualTime.TimeExp);
+                   
                     if (si.nextTime.TimeExp > virtualTime.TimeExp)
                         break;
                     else
@@ -163,6 +166,8 @@ namespace Mascaret
                         }
                         if (si.be.IsFinished)
                         {
+                            MascaretApplication.Instance.VRComponentFactory.Log("############# FINISHED ####################");
+                            MascaretApplication.Instance.VRComponentFactory.Log(si.be.ToString() + " time : " + virtualTime);
                             si.be.Finish = virtualTime;
                             deleteExecutionBehavior(si.be);
                             continue;

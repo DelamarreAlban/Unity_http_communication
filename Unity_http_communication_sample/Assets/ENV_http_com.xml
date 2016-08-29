@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Area name="HttpCommunication">
-<Model url="MOD_http_com" xmi2="true"/>
+  <Model url="MOD_http_com" xmi2="true"/>
 
-  	<Human name="Ralph" class="Capsule_Agent" area="HttpCommunication">
-  		<Shape url = "Ralph" />
-  		<Behavior name ="SimpleCommunicationBehavior" start = "true" interval="0.2"/>        
-  		<Behavior name ="ProceduralBehavior" start = "true" interval="0.2"/>
-  	</Human>
+  <Human name="Ralph" class="Capsule_Agent" area="HttpCommunication">
+    <Shape url = "Ralph" />
+    <Behavior name ="SimpleCommunicationBehavior" start = "true" interval="0.2"/>
+    <Behavior name ="ProceduralBehavior" start = "true" interval="0.2"/>
+  </Human>
 
-	<Organisation name ="org">
-    		<Structure>Team</Structure>
-    		<Affect type = "Role">
-      			<Role>Ralph</Role>
-         		<AID>
-            			<Name>Ralph</Name>
-            			<Plateform>localhost</Plateform>
-            			<Port>8081</Port>
-         		</AID>
-    		</Affect>
+  <Human name="Jack" class="Capsule_Agent" area="HttpCommunication">
+    <Shape url = "Jack" />
+    <Behavior name ="SimpleCommunicationBehavior" start = "true" interval="0.2"/>
+    <Behavior name ="ProceduralBehavior" start = "true" interval="0.2"/>
+  </Human>
 
-	</Organisation>
+  <Organisation name ="org">
+    <Structure>Team</Structure>
+    <Affect type = "Role">
+      <Role>Ralph</Role>
+      <AID>
+        <Name>Ralph</Name>
+        <Plateform>localhost</Plateform>
+        <Port>8081</Port>
+      </AID>
+    </Affect>
+    <Affect type = "Role">
+      <Role>Jack</Role>
+      <AID>
+        <Name>Jack</Name>
+        <Plateform>localhost</Plateform>
+        <Port>8081</Port>
+      </AID>
+    </Affect>
+
+  </Organisation>
 
 </Area>

@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine.Experimental.Networking;
 using System.Collections;
 
-public class httpRequest : MonoBehaviour {
+public class httpRequest {
 
     #region COROUTINES
 

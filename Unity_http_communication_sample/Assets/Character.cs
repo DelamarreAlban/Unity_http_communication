@@ -17,7 +17,7 @@ public class Character : MonoBehaviour {
     void Start()
     {
         historic = new Historic();
-        request = GetComponent<httpRequest>();
+        request = new httpRequest();
         //request = new httpRequest();
         xml = new XmlData();
     }
@@ -66,12 +66,11 @@ public class Character : MonoBehaviour {
         }
     }
 
-
-    public void colorChanged(GameObject go,  string color)
+    public void colorChanged(GameObject go, string color)
     {
         switch (color)
         {
-            case "blue": go.GetComponent<Renderer>().material.color = Color.blue;break;
+            case "blue": go.GetComponent<Renderer>().material.color = Color.blue; break;
             case "red": go.GetComponent<Renderer>().material.color = Color.red; break;
             case "green": go.GetComponent<Renderer>().material.color = Color.green; break;
             case "magenta": go.GetComponent<Renderer>().material.color = Color.magenta; break;
