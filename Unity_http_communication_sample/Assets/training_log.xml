@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<xml><messages><message performative="INFORM">
+<sender>Jack</sender>
+<date>63608252491147</date>
+<content>((action Jack (Playaction4Jack)))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>63608252491385</date>
+<content>((action Jack (ChangeColorJack)))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (ChangeColorJack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (ChangeColorJack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>63608252492497</date>
+<content>((action Jack (MoveJack)))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (MoveJack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (MoveJack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>63608252494602</date>
+<content>((action Jack (JumpJack)))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (JumpJack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (JumpJack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Jack</sender>
+<date>Temporal leak</date>
+<content>((done (action Jack (Playaction4Jack))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>63608252495796</date>
+<content>((action Ralph (Playaction4Ralph)))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>63608252495876</date>
+<content>((action Ralph (MoveRalph)))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (MoveRalph))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (MoveRalph))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>63608252498033</date>
+<content>((action Ralph (JumpRalph)))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (JumpRalph))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (JumpRalph))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>63608252499122</date>
+<content>((action Ralph (ChangeColorRalph)))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (ChangeColorRalph))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (ChangeColorRalph))))</content>
+</message>
+<message performative="INFORM">
+<sender>Ralph</sender>
+<date>Temporal leak</date>
+<content>((done (action Ralph (Playaction4Ralph))))</content>
+</message>
+</messages></xml>

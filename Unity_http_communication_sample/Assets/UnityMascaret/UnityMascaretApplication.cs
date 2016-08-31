@@ -12,8 +12,9 @@ public class UnityMascaretApplication : MonoBehaviour
 	public TextAsset masFile;
 	public TextAsset envFile;
 
-    private CallProcedureBehaviorExecution procedureBehaviorExecution;
-    private ProcedureExecution motherProcedure;
+    httpRequest httpHandler;
+    XmlData xmlHandler;
+    public string url = "http://localhost:8888";
 
     #region Useless
     [HideInInspector]
@@ -32,15 +33,6 @@ public class UnityMascaretApplication : MonoBehaviour
 
 	public bool loadAll = true;
 
-    private XmlData xmlHandler;
-    private bool acquiredCPBE = false;
-    private bool acquiredmother = false;
-    private bool posted = false;
-    private MascaretUnityActionRecorder actionRecorder;
-    private httpRequest requestHandler;
-    public string url = "http://localhost:8888";
-
-
     private VRApplication m_Mascaret;
     public VRApplication Mascaret
     {
@@ -55,13 +47,20 @@ public class UnityMascaretApplication : MonoBehaviour
 
 	void Awake()
 	{
-        // Initialisation of Mascaret
-        requestHandler = new httpRequest();
+        httpHandler = new httpRequest();
         xmlHandler = new XmlData();
-        /*string xmlFile = requestHandler.GET(url + "/ignition");
-        xmlHandler.saveStringToXml("Resources"+@"/MOD_http_com", xmlFile);
-        modFile = Resources.Load("MOD_http_com") as TextAsset;
-        */
+
+        Debug.Log("Loading ....");
+        string xmlFile = httpHandler.GET(url + "/ignition");
+        //Wait that the file is received
+        
+
+
+        xmlHandler.saveStringToXml(@"Resources\MOD_http_com", xmlFile);
+        StreamReader sr = new StreamReader(Application.dataPath + @"\Resources\" + "MOD_http_com" + ".xml");
+
+        Debug.Log(sr.ReadToEnd());
+        
         m_Mascaret = VRApplication.Instance;
 		m_Mascaret.window = new UnityWindow3D();
 		m_Mascaret.VRComponentFactory = new UnityVirtualRealityComponentFactory();
@@ -74,8 +73,6 @@ public class UnityMascaretApplication : MonoBehaviour
         //m_Mascaret.parse(m_ApplicationFile, Application.dataPath + "/StreamingAssets/" + m_BaseDir + "/", loadAll);
 
         m_Mascaret.parse(m_ApplicationFile, "", loadAll);
-
-        actionRecorder = new MascaretUnityActionRecorder(m_Mascaret.AgentPlateform);
 
         //m_Mascaret.parse(m_ApplicationFile, Application.streamingAssetsPath + m_BaseDir + "/", loadAll);
 
@@ -109,9 +106,13 @@ public class UnityMascaretApplication : MonoBehaviour
         {
             launchProcedure("moveProcedure");
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("r"))
         {
-            launchProcedure("move2Procedure");
+            launchProcedure("action4Ralph");
+        }
+        if (Input.GetKeyDown("a"))
+        {
+            launchProcedure("action4Jack");
         }
 
         if (Input.GetKeyDown("j"))
@@ -119,64 +120,23 @@ public class UnityMascaretApplication : MonoBehaviour
             launchProcedure("jumpProcedure");
         }
 
+        if (Input.GetKeyDown("p"))
+        {
+            launchProcedure("recording");
+        }
+
         if (Input.GetKeyDown("b"))
         {
             launchProcedure("MoveJump");
         }
 
-        if (procedureBehaviorExecution != null)
-        {
-            if (procedureBehaviorExecution.IsFinished && !acquiredCPBE)
-            {
-                Debug.Log("Acquired CPBE");
-                actionRecorder.getProcedureExecution(procedureBehaviorExecution);
-                acquiredCPBE = true;
-                //if (procedureBehaviorExecution.ProceduralBehavior.RunningProcedures[0].isFinished())
-            }
-            
-            if (acquiredCPBE)
-            {
-                if (!acquiredmother)
-                {
-                    actionRecorder.getProceduresToRecord();
-                    if (actionRecorder.motherProcedure != null)
-                    {
-                        Debug.Log("mother procedure acquired");
-                        motherProcedure = actionRecorder.motherProcedure;
-                        acquiredmother = true;
-                    }
-                }else {
-                    if (motherProcedure.isFinished())
-                    {
-                        //Debug.Log("FINISHED!!");
-                        //actionRecorder.showAllActions();
-                        if(!posted)
-                        {
-                            actionRecorder.getAllActionsDone();
-                            string xmlFilePath = actionRecorder.publishRecordedActions();
-                            requestHandler.POST("xml", url, xmlFilePath);
-                            Debug.Log("POSTED!!");
-                            posted = true;
-                        }
-                    }
-                    else
-                    {
-                        actionRecorder.getProceduresToRecord();
-                    }
-                }
-            }
-            
-        }
-
-        
-        
 	}
 
 	public void OnGUI()
 	{
 		if (showmenu) 
 		{
-			ShowMenuFunction();
+			//ShowMenuFunction();
 		}
 
 		Event current = Event.current;
@@ -217,6 +177,66 @@ public class UnityMascaretApplication : MonoBehaviour
 		}
 	}
 
+    private void startProcedure(string procedure)
+    {
+        string orgEntity = null;
+
+        List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
+        foreach (OrganisationalStructure s in structs)
+        {
+            List<Procedure> procs = s.Procedures;
+            foreach (Procedure p in procs)
+            {
+                if (p.name == procedure)
+                {
+                    orgEntity = s.Entities[0].name;
+                }
+            }
+        }
+        if (this.m_DebugMode)
+            Debug.Log("RUNNING : " + procedure + " / " + orgEntity);
+
+        List<Entity> entities = MascaretApplication.Instance.getEnvironment().getEntities();
+        Entity entity = entities[0];
+        Action action2 = null;
+        action2 = new CallProcedureAction();
+        ((CallProcedureAction)(action2)).Procedure = procedure;
+        ((CallProcedureAction)(action2)).OrganisationalEntity = orgEntity;
+        BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
+
+        Debug.Log("startProcedure #########################################################################");
+    }
+
+    private void launchProcedure(string procedure)
+    {
+        string orgEntity = null;
+
+        List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
+        foreach (OrganisationalStructure s in structs)
+        {
+            List<Procedure> procs = s.Procedures;
+            foreach (Procedure p in procs)
+            {
+                if (p.name == procedure)
+                {
+                    orgEntity = s.Entities[0].name;
+
+                }
+            }
+        }
+        Debug.Log("RUNNING : " + procedure + " / " + orgEntity);
+        List<Entity> entities = MascaretApplication.Instance.getEnvironment().getEntities();
+        Entity entity = entities[0];
+        Action action2 = null;
+        action2 = new CallProcedureAction();
+        ((CallProcedureAction)(action2)).Procedure = procedure;
+        ((CallProcedureAction)(action2)).OrganisationalEntity = orgEntity;
+        BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
+
+        Debug.Log("startProcedure #########################################################################");
+    }
+
+
     #region UselessMethods
     public void ShowMenuFunction()
     {
@@ -246,69 +266,6 @@ public class UnityMascaretApplication : MonoBehaviour
         }
 
     }
-
-    private void startProcedure(string procedure)
-    {
-        string orgEntity = null;
-
-        List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
-        foreach (OrganisationalStructure s in structs)
-        {
-            List<Procedure> procs = s.Procedures;
-            foreach (Procedure p in procs)
-            {
-                if (p.name == procedure)
-                {
-                    orgEntity = s.Entities[0].name;
-                    
-                }
-            }
-        }
-        if (this.m_DebugMode)
-            Debug.Log("RUNNING : " + procedure + " / " + orgEntity);
-
-        List<Entity> entities = MascaretApplication.Instance.getEnvironment().getEntities();
-        Entity entity = entities[0];
-        Action action2 = null;
-        action2 = new CallProcedureAction();
-        ((CallProcedureAction)(action2)).Procedure = procedure;
-        ((CallProcedureAction)(action2)).OrganisationalEntity = orgEntity;
-        procedureBehaviorExecution = (CallProcedureBehaviorExecution)BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
-
-        Debug.Log("startProcedure #########################################################################");
-    }
-
-    private void launchProcedure(string procedure)
-    {
-        string orgEntity = null;
-
-        List<OrganisationalStructure> structs = VRApplication.Instance.AgentPlateform.Structures;
-        foreach (OrganisationalStructure s in structs)
-        {
-            List<Procedure> procs = s.Procedures;
-            foreach (Procedure p in procs)
-            {
-                if (p.name == procedure)
-                {
-                    orgEntity = s.Entities[0].name;
-
-                }
-            }
-        }
-        Debug.Log("RUNNING : " + procedure + " / " + orgEntity);
-        List<Entity> entities = MascaretApplication.Instance.getEnvironment().getEntities();
-        Entity entity = entities[0];
-        Action action2 = null;
-        action2 = new CallProcedureAction();
-        ((CallProcedureAction)(action2)).Procedure = procedure;
-        ((CallProcedureAction)(action2)).OrganisationalEntity = orgEntity;
-        procedureBehaviorExecution = (CallProcedureBehaviorExecution)BehaviorScheduler.Instance.executeBehavior(action2, entity, new Dictionary<string, ValueSpecification>(), false);
-
-        Debug.Log("startProcedure #########################################################################");
-    }
-
-	
-    
     #endregion
 	
 	

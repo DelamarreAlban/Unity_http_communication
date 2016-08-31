@@ -39,8 +39,6 @@ namespace Mascaret
 
         public virtual void parse(string applicationFileName, string baseDir, bool loadAll)
         {
-           
-          
             BaseDir =baseDir;
 
             XDocument parser;

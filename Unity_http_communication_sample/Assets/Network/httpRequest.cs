@@ -66,8 +66,9 @@ public class httpRequest {
         string responseStr = "";
 
         WebResponse response = null;
-        try { response = request.GetResponse(); }
-        catch { response = null; }
+        response = request.GetResponse();
+        //try { response = request.GetResponse(); }
+        //catch { response = null; }
 
 
         if (response != null)
@@ -85,7 +86,7 @@ public class httpRequest {
         return responseStr;
     }
     
-    public string POST(string type, string url,  string filepath)
+    public string POST(string fileType, string url,  string filepath)
 	{
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
         request.Method = "POST";
@@ -93,7 +94,7 @@ public class httpRequest {
         string responseStr = "";
         byte[] bytes;
 
-        if (type == "xml")
+        if (fileType == "xml")
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(filepath);

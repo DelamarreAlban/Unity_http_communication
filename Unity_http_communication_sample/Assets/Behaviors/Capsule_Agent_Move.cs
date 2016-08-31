@@ -26,9 +26,9 @@ public class Capsule_Agent_Move : BehaviorExecution  {
         agent = entity.GetComponent<NavMeshAgent>();
         target = GameObject.Find ("Target");
         UnityEngine.Vector3 position = new UnityEngine.Vector3(Random.Range(-20.0f, 20.0f), 0, Random.Range(-20.0f, 20.0f));
-        position += agent.transform.position;
+        //position += agent.transform.position;
         NavMeshHit hit;
-        NavMesh.SamplePosition(position, out hit, 20.0f, 1);
+        NavMesh.SamplePosition(position, out hit, 3.0f, 1);
         target.transform.position = hit.position;
 
     }
@@ -38,15 +38,15 @@ public class Capsule_Agent_Move : BehaviorExecution  {
 		if (state == 0) {
 			Debug.Log ("===================================MOVE==========================================       " + entityName);
 			//agent.transform.position = target.transform.position;
-			agent.SetDestination (target.transform.position);
+			//agent.SetDestination (target.transform.position);
 			state ++;
 			return 1.0;
 
 		} else if (state == 1) {
-			if (AtEndOfPath())
-            {
+			//if (AtEndOfPath())
+            //{
                 state++;
-            }
+            //}
 			return 1.0;
 		} else {
 			return 0;

@@ -14,8 +14,22 @@
     <Behavior name ="ProceduralBehavior" start = "true" interval="0.2"/>
   </Human>
 
+  <Human name="Recorder" class="AgentRecorder" area="HttpCommunication">
+    <Shape url = "Recorder" />
+    <Behavior name ="SimpleCommunicationBehavior" start = "true" interval="0.2"/>
+    <Behavior name ="ProceduralBehavior" start = "true" interval="0.2"/>
+  </Human>
+
   <Organisation name ="org">
     <Structure>Team</Structure>
+    <Affect type = "Role">
+      <Role>Recorder</Role>
+      <AID>
+        <Name>Recorder</Name>
+        <Plateform>localhost</Plateform>
+        <Port>8081</Port>
+      </AID>
+    </Affect>
     <Affect type = "Role">
       <Role>Ralph</Role>
       <AID>

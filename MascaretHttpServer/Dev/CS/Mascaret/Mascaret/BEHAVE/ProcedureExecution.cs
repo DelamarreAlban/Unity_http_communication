@@ -561,10 +561,14 @@ namespace Mascaret
 
         public void informActionRunning(AID agent, string actionName)
         {
-            MascaretApplication.Instance.VRComponentFactory.Log("Start : " + actionName);
 
             ActionNode action = getActionByNameFor(agent, actionName);
-            informActionRunning(agent, action);
+            if (action != null)
+            {
+                MascaretApplication.Instance.VRComponentFactory.Log("Start : " + actionName);
+
+                informActionRunning(agent, action);
+            }
         }
 
         public void informActionRunning(AID agent, ActionNode action)
@@ -646,6 +650,10 @@ namespace Mascaret
                             allActionsDoneTimestamps.Add(agent.toString(),new List<TimeExpression>());
                         allActionsDoneTimestamps[agent.toString()].Add( doneAction.CurrentExecution.Finish);
                         MascaretApplication.Instance.VRComponentFactory.Log("Done");
+
+                        MascaretApplication.Instance.VRComponentFactory.Log("******************************************************************");
+                        MascaretApplication.Instance.VRComponentFactory.Log("ACTION RUNNING    On procedure " + this.procedure.name + "     Received by " + this.agent.name + "       :  " + agent.name + " performing action " + doneAction.name);
+                        MascaretApplication.Instance.VRComponentFactory.Log("******************************************************************");
                     }
                     else
                     {
@@ -658,7 +666,14 @@ namespace Mascaret
         public void informActionDone(AID agent, string actionName)
         {
             ActionNode action = getActionByNameFor(agent, actionName);
-            informActionDone(agent, action);
+            if (action != null)
+            {
+                
+                informActionDone(agent, action);
+            
+                
+            }
+            
         }
 
         public void informActionDone(AID agent, ActionNode action)
@@ -699,6 +714,7 @@ namespace Mascaret
 					    actionsDone.Add(doneAction);
 						allActionsDone[agent.toString()].Add(doneAction);
 						allActionsDoneTimestamps[agent.toString()].Add(doneAction.CurrentExecution.Finish);
+                        MascaretApplication.Instance.VRComponentFactory.Log("ACTION DONE     On Procedure "+ procedure.name +"     Recieved by "+ this.agent.name  +    " :   Agent  "+  agent.name  + " performed action  :  " + doneAction.name +"            Token ADVANCED!");
                     }
                     else
                     {

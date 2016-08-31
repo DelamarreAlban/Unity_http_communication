@@ -362,7 +362,7 @@ namespace Mascaret
             TimeExpression timestamp = BehaviorScheduler.Instance.getCurrentVirtualTime();
             procMsg.Timestamp = timestamp;
 
-            string content = "((done (action ";
+            string content = "((done (procedure ";
             content += agt.name;
             content += " ";
             content += "(" + clean(procInfo.procedure.name) + ")";

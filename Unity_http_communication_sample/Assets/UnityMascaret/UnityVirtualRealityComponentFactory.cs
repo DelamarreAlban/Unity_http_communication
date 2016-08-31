@@ -41,30 +41,42 @@ public class UnityVirtualRealityComponentFactory : VirtualRealityComponentFactor
 	public override string readFlow (string url)
     {
 		url = url.Remove (0, 1);
-		Debug.Log (url);
+		Debug.Log ("read flow : " + url);
 		TextAsset file = null;
         
-		if (url == "MAS_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().masFile;
-		if (url == "ENV_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().envFile;
-		if (url == "MOD_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().modFile;
+		//if (url == "MAS_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().masFile;
+		//if (url == "ENV_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().envFile;
+        //if (url == "MOD_http_com") file = GameObject.Find ("MascaretApplication").GetComponent<UnityMascaretApplication> ().modFile;
         
-        /*
+        
         if (url == "MAS_http_com") file = Resources.Load("MAS_http_com") as TextAsset;
         if (url == "ENV_http_com") file = Resources.Load("ENV_http_com") as TextAsset;
-        if (url == "MOD_http_com") file = Resources.Load("MOD_http_com") as TextAsset;
-        */
+
+
+
+        if (url == "MOD_http_com")
+        {
+            //file = Resources.Load( "MOD_http_com") as TextAsset;
+            httpRequest httpHandler = new httpRequest();
+            return httpHandler.GET("http://localhost:8888" + "/ignition");
+        }
+
+        //Debug.Log("READFLOW : " + file.text);
+
         return file.text;
 		/*
         string assetPath = url;
         
-		if (XMLFiles.ContainsKey (Path.GetExtension (url)))
-			return XMLFiles [Path.GetExtension (url)];
-		else {
-        */
-			//#if UNITY_STANDALONE_WIN  || UNITY_EDITOR
+        
+		//if (XMLFiles.ContainsKey (Path.GetExtension (url)))
+		//	return XMLFiles [Path.GetExtension (url)];
+		//else {
+        
+			#if UNITY_STANDALONE_WIN  || UNITY_EDITOR
 			//assetPath = "file://" + assetPath;
-			//#endif
-			/*if (assetPath != null) {// Load XML structure
+#endif
+        Debug.Log("URL : " + assetPath);
+			if (assetPath != null) {// Load XML structure
 				WWW configFile = new WWW (assetPath);
 				if (configFile == null) {
 					Debug.Log ("File " + assetPath + " cannot be downloaded");
@@ -77,7 +89,7 @@ public class UnityVirtualRealityComponentFactory : VirtualRealityComponentFactor
 					while (!configFile.isDone) {
 						if (!string.IsNullOrEmpty (configFile.error)) {
 							Debug.Log ("File " + assetPath + " cannot be downloaded : error = " + configFile.error);
-							return "";
+							//return "";
 						}
 					}
 

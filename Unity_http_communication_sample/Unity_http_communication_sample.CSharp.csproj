@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.5f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -74,9 +72,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Behaviors\AgentRecorder_EndRecording.cs" />
+    <Compile Include="Assets\Behaviors\AgentRecorder_Record.cs" />
     <Compile Include="Assets\Behaviors\Capsule_Agent_ChangeColor.cs" />
     <Compile Include="Assets\Behaviors\Capsule_Agent_Jump.cs" />
     <Compile Include="Assets\Behaviors\Capsule_Agent_Move.cs" />
+    <Compile Include="Assets\Behaviors\Recorder.cs" />
     <Compile Include="Assets\Character.cs" />
     <Compile Include="Assets\Controller.cs" />
     <Compile Include="Assets\Network\httpRequest.cs" />
@@ -97,15 +98,14 @@
     <Compile Include="Assets\historic.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ENV_http_com.xml" />
-    <None Include="Assets\MAS_http_com.xml" />
-    <None Include="Assets\MOD_http_com.xml" />
+    <None Include="Assets\Resources\ENV_http_com.xml" />
+    <None Include="Assets\Resources\MAS_http_com.xml" />
+    <None Include="Assets\Resources\MOD_http_com.xml" />
     <None Include="Assets\UnityMascaret\Antlr4.Runtime.net35.xml" />
     <None Include="Assets\historic.xml" />
     <None Include="Assets\parameter.xml" />
-    <None Include="Assets\scene1.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\scene1.xml" />
+    <None Include="Assets\training_log.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

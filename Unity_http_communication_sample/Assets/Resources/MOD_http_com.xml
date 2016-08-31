@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LocalProfile="http:///schemas/LocalProfile/_IlsC8G-cEeai48fLq4zp7w/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/LocalProfile/_IlsC8G-cEeai48fLq4zp7w/0 LocalProfile.profile.xmi#_IlsC-G-cEeai48fLq4zp7w">
+  <uml:Model xmi:id="_Ilrb4G-cEeai48fLq4zp7w" name="httpcommunication">
+    <eAnnotations xmi:id="_Ilrb4W-cEeai48fLq4zp7w" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_Ilrb4m-cEeai48fLq4zp7w" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ilrb42-cEeai48fLq4zp7w" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ilrb5G-cEeai48fLq4zp7w" name="Httpcommunication">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Ilrb5W-cEeai48fLq4zp7w" name="Environment"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Ilrb5m-cEeai48fLq4zp7w" name="Organisation">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_Ilrb52-cEeai48fLq4zp7w" name="CapsuleR" isAbstract="true">
+          <ownedOperation xmi:id="_Ilrb6G-cEeai48fLq4zp7w" name="Move" visibility="public" redefinedOperation="_Ilrb8W-cEeai48fLq4zp7w"/>
+          <ownedOperation xmi:id="_Ilrb6W-cEeai48fLq4zp7w" name="Jump" visibility="public" redefinedOperation="_Ilrb8m-cEeai48fLq4zp7w"/>
+          <ownedOperation xmi:id="_Ilrb6m-cEeai48fLq4zp7w" name="ChangeColor" visibility="public" redefinedOperation="_Ilrb82-cEeai48fLq4zp7w"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_Ilrb62-cEeai48fLq4zp7w" name="RecorderR" isAbstract="true">
+          <ownedOperation xmi:id="_Ilrb7G-cEeai48fLq4zp7w" name="Record" visibility="public" redefinedOperation="_Ilrb9m-cEeai48fLq4zp7w"/>
+          <ownedOperation xmi:id="_Ilrb7W-cEeai48fLq4zp7w" name="EndRecording" visibility="public" redefinedOperation="_Ilrb92-cEeai48fLq4zp7w"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Ilrb7m-cEeai48fLq4zp7w" name="Agent">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Ilrb72-cEeai48fLq4zp7w" name="Capsule_Agent" clientDependency="_Ilrb8G-cEeai48fLq4zp7w">
+          <interfaceRealization xmi:id="_Ilrb8G-cEeai48fLq4zp7w" name="InterfaceRealization" supplier="_Ilrb52-cEeai48fLq4zp7w" client="_Ilrb72-cEeai48fLq4zp7w" contract="_Ilrb52-cEeai48fLq4zp7w"/>
+          <ownedOperation xmi:id="_Ilrb8W-cEeai48fLq4zp7w" name="Move" visibility="public"/>
+          <ownedOperation xmi:id="_Ilrb8m-cEeai48fLq4zp7w" name="Jump" visibility="public"/>
+          <ownedOperation xmi:id="_Ilrb82-cEeai48fLq4zp7w" name="ChangeColor" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Ilrb9G-cEeai48fLq4zp7w" name="AgentRecorder" clientDependency="_Ilrb9W-cEeai48fLq4zp7w">
+          <interfaceRealization xmi:id="_Ilrb9W-cEeai48fLq4zp7w" name="InterfaceRealization" supplier="_Ilrb62-cEeai48fLq4zp7w" client="_Ilrb9G-cEeai48fLq4zp7w" contract="_Ilrb62-cEeai48fLq4zp7w"/>
+          <ownedOperation xmi:id="_Ilrb9m-cEeai48fLq4zp7w" name="Record" visibility="public"/>
+          <ownedOperation xmi:id="_Ilrb92-cEeai48fLq4zp7w" name="EndRecording" visibility="public"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ilrb-G-cEeai48fLq4zp7w" name="Pedagogy"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ilrb-W-cEeai48fLq4zp7w" name="Scenario">
+      <packagedElement xmi:type="uml:Collaboration" xmi:id="_Ilrb-m-cEeai48fLq4zp7w" name="Team">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_Ilrb-2-cEeai48fLq4zp7w" name="moveProcedure">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_Ilrb_G-cEeai48fLq4zp7w" name="locals"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_Ilrb_W-cEeai48fLq4zp7w" name="Move" outgoing="_IlrcAG-cEeai48fLq4zp7w" incoming="_IlrcAm-cEeai48fLq4zp7w" inPartition="_IlrcBG-cEeai48fLq4zp7w" operation="_Ilrb6G-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_Ilrb_m-cEeai48fLq4zp7w" name="Initial Node" outgoing="_IlrcAm-cEeai48fLq4zp7w" inPartition="_IlrcBG-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_Ilrb_2-cEeai48fLq4zp7w" name="Activity Final Node" incoming="_IlrcAG-cEeai48fLq4zp7w" inPartition="_IlrcBG-cEeai48fLq4zp7w"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcAG-cEeai48fLq4zp7w" name="ControlFlow" source="_Ilrb_W-cEeai48fLq4zp7w" target="_Ilrb_2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcAW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcAm-cEeai48fLq4zp7w" name="ControlFlow" source="_Ilrb_m-cEeai48fLq4zp7w" target="_Ilrb_W-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcA2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcBG-cEeai48fLq4zp7w" name="Ralph" node="_Ilrb_W-cEeai48fLq4zp7w _Ilrb_m-cEeai48fLq4zp7w _Ilrb_2-cEeai48fLq4zp7w" represents="_IlrcW2-cEeai48fLq4zp7w"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_IlrcBW-cEeai48fLq4zp7w" name="jumpProcedure">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_IlrcBm-cEeai48fLq4zp7w" name="locals"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_IlrcB2-cEeai48fLq4zp7w" name="Initial Node" outgoing="_IlrcCm-cEeai48fLq4zp7w" inPartition="_IlrcDm-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcCG-cEeai48fLq4zp7w" name="Jump" outgoing="_IlrcDG-cEeai48fLq4zp7w" incoming="_IlrcCm-cEeai48fLq4zp7w" inPartition="_IlrcDm-cEeai48fLq4zp7w" operation="_Ilrb6W-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_IlrcCW-cEeai48fLq4zp7w" name="Activity Final Node" incoming="_IlrcDG-cEeai48fLq4zp7w" inPartition="_IlrcDm-cEeai48fLq4zp7w"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcCm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcB2-cEeai48fLq4zp7w" target="_IlrcCG-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcC2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcDG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcCG-cEeai48fLq4zp7w" target="_IlrcCW-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcDW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcDm-cEeai48fLq4zp7w" name="Ralph" node="_IlrcB2-cEeai48fLq4zp7w _IlrcCG-cEeai48fLq4zp7w _IlrcCW-cEeai48fLq4zp7w" represents="_IlrcW2-cEeai48fLq4zp7w"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_IlrcD2-cEeai48fLq4zp7w" name="MoveJump">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_IlrcEG-cEeai48fLq4zp7w" name="locals"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_IlrcEW-cEeai48fLq4zp7w" name="Initial Node" outgoing="_IlrcGm-cEeai48fLq4zp7w" inPartition="_IlrcKm-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallBehaviorAction" xmi:id="_IlrcEm-cEeai48fLq4zp7w" name="Playaction4Ralph" outgoing="_IlrcHG-cEeai48fLq4zp7w" incoming="_IlrcHm-cEeai48fLq4zp7w" inPartition="_IlrcKm-cEeai48fLq4zp7w" behavior="_IlrcLW-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallBehaviorAction" xmi:id="_IlrcE2-cEeai48fLq4zp7w" name="Playaction4Jack" outgoing="_IlrcHm-cEeai48fLq4zp7w" incoming="_IlrcIG-cEeai48fLq4zp7w" inPartition="_IlrcK2-cEeai48fLq4zp7w" behavior="_IlrcP2-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:ForkNode" xmi:id="_IlrcFG-cEeai48fLq4zp7w" name="Fork/Join" outgoing="_IlrcIG-cEeai48fLq4zp7w _IlrcIm-cEeai48fLq4zp7w" incoming="_IlrcGm-cEeai48fLq4zp7w" inPartition="_IlrcK2-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcFW-cEeai48fLq4zp7w" name="RecordBoth" outgoing="_IlrcJG-cEeai48fLq4zp7w" incoming="_IlrcIm-cEeai48fLq4zp7w" inPartition="_IlrcLG-cEeai48fLq4zp7w" operation="_Ilrb7G-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcFm-cEeai48fLq4zp7w" name="EndRecordingBoth" outgoing="_IlrcJm-cEeai48fLq4zp7w" incoming="_IlrcHG-cEeai48fLq4zp7w" inPartition="_IlrcLG-cEeai48fLq4zp7w" operation="_Ilrb7W-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:JoinNode" xmi:id="_IlrcF2-cEeai48fLq4zp7w" name="Fork/Join" outgoing="_IlrcKG-cEeai48fLq4zp7w" incoming="_IlrcJG-cEeai48fLq4zp7w _IlrcJm-cEeai48fLq4zp7w" inPartition="_IlrcLG-cEeai48fLq4zp7w">
+            <joinSpec xmi:type="uml:LiteralString" xmi:id="_IlrcGG-cEeai48fLq4zp7w" value="and"/>
+          </node>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_IlrcGW-cEeai48fLq4zp7w" name="Activity Final Node" incoming="_IlrcKG-cEeai48fLq4zp7w" inPartition="_IlrcLG-cEeai48fLq4zp7w"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcGm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcEW-cEeai48fLq4zp7w" target="_IlrcFG-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcG2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcHG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcEm-cEeai48fLq4zp7w" target="_IlrcFm-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcHW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcHm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcE2-cEeai48fLq4zp7w" target="_IlrcEm-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcH2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcIG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcFG-cEeai48fLq4zp7w" target="_IlrcE2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcIW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcIm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcFG-cEeai48fLq4zp7w" target="_IlrcFW-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcI2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcJG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcFW-cEeai48fLq4zp7w" target="_IlrcF2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcJW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcJm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcFm-cEeai48fLq4zp7w" target="_IlrcF2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcJ2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcKG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcF2-cEeai48fLq4zp7w" target="_IlrcGW-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcKW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcKm-cEeai48fLq4zp7w" name="Ralph" node="_IlrcEW-cEeai48fLq4zp7w _IlrcEm-cEeai48fLq4zp7w" represents="_IlrcW2-cEeai48fLq4zp7w"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcK2-cEeai48fLq4zp7w" name="Jack" node="_IlrcE2-cEeai48fLq4zp7w _IlrcFG-cEeai48fLq4zp7w" represents="_IlrcXG-cEeai48fLq4zp7w"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcLG-cEeai48fLq4zp7w" name="Recorder" node="_IlrcFW-cEeai48fLq4zp7w _IlrcFm-cEeai48fLq4zp7w _IlrcF2-cEeai48fLq4zp7w _IlrcGW-cEeai48fLq4zp7w" represents="_IlrcXW-cEeai48fLq4zp7w"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_IlrcLW-cEeai48fLq4zp7w" name="action4Ralph">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_IlrcLm-cEeai48fLq4zp7w" name="locals"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcL2-cEeai48fLq4zp7w" name="MoveRalph" outgoing="_IlrcNG-cEeai48fLq4zp7w" incoming="_IlrcNm-cEeai48fLq4zp7w" inPartition="_IlrcPG-cEeai48fLq4zp7w" operation="_Ilrb6G-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_IlrcMG-cEeai48fLq4zp7w" name="Initial Node" outgoing="_IlrcNm-cEeai48fLq4zp7w" inPartition="_IlrcPG-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_IlrcMW-cEeai48fLq4zp7w" name="Activity Final Node" incoming="_IlrcOm-cEeai48fLq4zp7w" inPartition="_IlrcPG-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcMm-cEeai48fLq4zp7w" name="JumpRalph" outgoing="_IlrcOG-cEeai48fLq4zp7w" incoming="_IlrcNG-cEeai48fLq4zp7w" inPartition="_IlrcPG-cEeai48fLq4zp7w" operation="_Ilrb6W-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcM2-cEeai48fLq4zp7w" name="ChangeColorRalph" outgoing="_IlrcOm-cEeai48fLq4zp7w" incoming="_IlrcOG-cEeai48fLq4zp7w" inPartition="_IlrcPG-cEeai48fLq4zp7w" operation="_Ilrb6m-cEeai48fLq4zp7w"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcNG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcL2-cEeai48fLq4zp7w" target="_IlrcMm-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcNW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcNm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcMG-cEeai48fLq4zp7w" target="_IlrcL2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcN2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcOG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcMm-cEeai48fLq4zp7w" target="_IlrcM2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcOW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcOm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcM2-cEeai48fLq4zp7w" target="_IlrcMW-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcO2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcPG-cEeai48fLq4zp7w" name="Ralph" node="_IlrcL2-cEeai48fLq4zp7w _IlrcMG-cEeai48fLq4zp7w _IlrcMW-cEeai48fLq4zp7w _IlrcMm-cEeai48fLq4zp7w _IlrcM2-cEeai48fLq4zp7w" represents="_IlrcW2-cEeai48fLq4zp7w"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcPW-cEeai48fLq4zp7w" name="Jack" represents="_IlrcXG-cEeai48fLq4zp7w"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcPm-cEeai48fLq4zp7w" name="Recorder" represents="_IlrcXW-cEeai48fLq4zp7w"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_IlrcP2-cEeai48fLq4zp7w" name="action4Jack">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_IlrcQG-cEeai48fLq4zp7w" name="locals"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_IlrcQW-cEeai48fLq4zp7w" name="Initial Node" outgoing="_IlrcRm-cEeai48fLq4zp7w" inPartition="_IlrcTm-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_IlrcQm-cEeai48fLq4zp7w" name="Activity Final Node" incoming="_IlrcTG-cEeai48fLq4zp7w" inPartition="_IlrcTm-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcQ2-cEeai48fLq4zp7w" name="MoveJack" outgoing="_IlrcSG-cEeai48fLq4zp7w" incoming="_IlrcSm-cEeai48fLq4zp7w" inPartition="_IlrcTm-cEeai48fLq4zp7w" operation="_Ilrb6G-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcRG-cEeai48fLq4zp7w" name="ChangeColorJack" outgoing="_IlrcSm-cEeai48fLq4zp7w" incoming="_IlrcRm-cEeai48fLq4zp7w" inPartition="_IlrcTm-cEeai48fLq4zp7w" operation="_Ilrb6m-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcRW-cEeai48fLq4zp7w" name="JumpJack" outgoing="_IlrcTG-cEeai48fLq4zp7w" incoming="_IlrcSG-cEeai48fLq4zp7w" inPartition="_IlrcTm-cEeai48fLq4zp7w" operation="_Ilrb6W-cEeai48fLq4zp7w"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcRm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcQW-cEeai48fLq4zp7w" target="_IlrcRG-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcR2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcSG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcQ2-cEeai48fLq4zp7w" target="_IlrcRW-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcSW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcSm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcRG-cEeai48fLq4zp7w" target="_IlrcQ2-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcS2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcTG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcRW-cEeai48fLq4zp7w" target="_IlrcQm-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcTW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcTm-cEeai48fLq4zp7w" name="Jack" node="_IlrcQW-cEeai48fLq4zp7w _IlrcQm-cEeai48fLq4zp7w _IlrcQ2-cEeai48fLq4zp7w _IlrcRG-cEeai48fLq4zp7w _IlrcRW-cEeai48fLq4zp7w" represents="_IlrcXG-cEeai48fLq4zp7w"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcT2-cEeai48fLq4zp7w" name="Ralph" represents="_IlrcW2-cEeai48fLq4zp7w"/>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcUG-cEeai48fLq4zp7w" name="Recorder" represents="_IlrcXW-cEeai48fLq4zp7w"/>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_IlrcUW-cEeai48fLq4zp7w" name="recording">
+          <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_IlrcUm-cEeai48fLq4zp7w" name="locals"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_IlrcU2-cEeai48fLq4zp7w" name="Initial Node" outgoing="_IlrcVm-cEeai48fLq4zp7w" inPartition="_IlrcWm-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_IlrcVG-cEeai48fLq4zp7w" name="Activity Final Node" incoming="_IlrcWG-cEeai48fLq4zp7w" inPartition="_IlrcWm-cEeai48fLq4zp7w"/>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_IlrcVW-cEeai48fLq4zp7w" name="Record0000" outgoing="_IlrcWG-cEeai48fLq4zp7w" incoming="_IlrcVm-cEeai48fLq4zp7w" inPartition="_IlrcWm-cEeai48fLq4zp7w" operation="_Ilrb7G-cEeai48fLq4zp7w"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcVm-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcU2-cEeai48fLq4zp7w" target="_IlrcVW-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcV2-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_IlrcWG-cEeai48fLq4zp7w" name="ControlFlow" source="_IlrcVW-cEeai48fLq4zp7w" target="_IlrcVG-cEeai48fLq4zp7w">
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_IlrcWW-cEeai48fLq4zp7w" value="1"/>
+          </edge>
+          <group xmi:type="uml:ActivityPartition" xmi:id="_IlrcWm-cEeai48fLq4zp7w" name="Recorder" node="_IlrcU2-cEeai48fLq4zp7w _IlrcVG-cEeai48fLq4zp7w _IlrcVW-cEeai48fLq4zp7w" represents="_IlrcXW-cEeai48fLq4zp7w"/>
+        </ownedBehavior>
+        <ownedAttribute xmi:id="_IlrcW2-cEeai48fLq4zp7w" name="Ralph" type="_Ilrb52-cEeai48fLq4zp7w" aggregation="composite"/>
+        <ownedAttribute xmi:id="_IlrcXG-cEeai48fLq4zp7w" name="Jack" type="_Ilrb52-cEeai48fLq4zp7w" aggregation="composite"/>
+        <ownedAttribute xmi:id="_IlrcXW-cEeai48fLq4zp7w" name="Recorder" type="_Ilrb62-cEeai48fLq4zp7w" aggregation="composite"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_IlvGQG-cEeai48fLq4zp7w">
+      <eAnnotations xmi:id="_IlvGQW-cEeai48fLq4zp7w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="LocalProfile.profile.xmi#_IlsC-G-cEeai48fLq4zp7w"/>
+      </eAnnotations>
+      <appliedProfile href="LocalProfile.profile.xmi#_IlsC8W-cEeai48fLq4zp7w"/>
+    </profileApplication>
+  </uml:Model>
+  <LocalProfile:Role xmi:id="_IlvtUG-cEeai48fLq4zp7w" base_Interface="_Ilrb52-cEeai48fLq4zp7w"/>
+  <LocalProfile:Role xmi:id="_IlvtUW-cEeai48fLq4zp7w" base_Interface="_Ilrb62-cEeai48fLq4zp7w"/>
+  <LocalProfile:VirtualHuman xmi:id="_IlvtUm-cEeai48fLq4zp7w" base_Class="_Ilrb72-cEeai48fLq4zp7w"/>
+  <LocalProfile:VirtualHuman xmi:id="_IlvtU2-cEeai48fLq4zp7w" base_Class="_Ilrb9G-cEeai48fLq4zp7w"/>
+</xmi:XMI>

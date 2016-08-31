@@ -31,7 +31,15 @@ public class XmlData
         System.IO.File.WriteAllText (url, stringToXml);
         Debug.Log("Writting file at " + Application.dataPath + @"\" + name + ".xml");
 
+        
+
         return url;
+    }
+
+    public void replaceAllInFile(string filePath, string newText)
+    {
+        File.WriteAllText(filePath, "");
+        System.IO.File.WriteAllText(filePath, newText);
     }
 
     public void GetObjectFromXML(string xmlPath)

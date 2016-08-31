@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_vDUdQG4tEeaciKY8-Wizlw" name="LocalProfile" metaclassReference="_vDUdUG4tEeaciKY8-Wizlw _vDUdUW4tEeaciKY8-Wizlw">
-  <eAnnotations xmi:id="_vDUdQW4tEeaciKY8-Wizlw" source="Objing">
-    <contents xmi:type="uml:Property" xmi:id="_vDUdQm4tEeaciKY8-Wizlw" name="Module">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_vDUdQ24tEeaciKY8-Wizlw" value="eb70271f-18ff-4e53-b674-1c3a1f8a3f00"/>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_IlsC8W-cEeai48fLq4zp7w" name="LocalProfile" metaclassReference="_IlsDAW-cEeai48fLq4zp7w _IlsDAm-cEeai48fLq4zp7w">
+  <eAnnotations xmi:id="_IlsC8m-cEeai48fLq4zp7w" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_IlsC82-cEeai48fLq4zp7w" name="Module">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_IlsC9G-cEeai48fLq4zp7w" value="eb70271f-18ff-4e53-b674-1c3a1f8a3f00"/>
     </contents>
-    <contents xmi:type="uml:Property" xmi:id="_vDUdRG4tEeaciKY8-Wizlw" name="ID">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_vDUdRW4tEeaciKY8-Wizlw" value="2843bfea-eba3-4b96-916f-159061fd0f4b"/>
+    <contents xmi:type="uml:Property" xmi:id="_IlsC9W-cEeai48fLq4zp7w" name="ID">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_IlsC9m-cEeai48fLq4zp7w" value="2843bfea-eba3-4b96-916f-159061fd0f4b"/>
     </contents>
   </eAnnotations>
-  <eAnnotations xmi:id="_vDUdRm4tEeaciKY8-Wizlw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-    <contents xmi:type="ecore:EPackage" xmi:id="_vDUdR24tEeaciKY8-Wizlw" name="LocalProfile" nsURI="http:///schemas/LocalProfile/_vDT2kG4tEeaciKY8-Wizlw/0" nsPrefix="LocalProfile">
-      <eClassifiers xmi:type="ecore:EClass" xmi:id="_vDUdSG4tEeaciKY8-Wizlw" name="VirtualHuman">
-        <eAnnotations xmi:id="_vDUdSW4tEeaciKY8-Wizlw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vDUdUm4tEeaciKY8-Wizlw"/>
-        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vDUdSm4tEeaciKY8-Wizlw" name="base_Class" ordered="false" lowerBound="1">
+  <eAnnotations xmi:id="_IlsC92-cEeai48fLq4zp7w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_IlsC-G-cEeai48fLq4zp7w" name="LocalProfile" nsURI="http:///schemas/LocalProfile/_IlsC8G-cEeai48fLq4zp7w/0" nsPrefix="LocalProfile">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_IlsC-W-cEeai48fLq4zp7w" name="VirtualHuman">
+        <eAnnotations xmi:id="_IlsC-m-cEeai48fLq4zp7w" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_IlsDA2-cEeai48fLq4zp7w"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_IlsC-2-cEeai48fLq4zp7w" name="base_Class" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
         </eStructuralFeatures>
       </eClassifiers>
-      <eClassifiers xmi:type="ecore:EClass" xmi:id="_vDUdTG4tEeaciKY8-Wizlw" name="Role">
-        <eAnnotations xmi:id="_vDUdTW4tEeaciKY8-Wizlw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vDUdWW4tEeaciKY8-Wizlw"/>
-        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vDUdTm4tEeaciKY8-Wizlw" name="base_Interface" ordered="false" lowerBound="1">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_IlsC_W-cEeai48fLq4zp7w" name="Role">
+        <eAnnotations xmi:id="_IlsC_m-cEeai48fLq4zp7w" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_IlsDCm-cEeai48fLq4zp7w"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_IlsC_2-cEeai48fLq4zp7w" name="base_Interface" ordered="false" lowerBound="1">
           <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interface"/>
         </eStructuralFeatures>
       </eClassifiers>
     </contents>
   </eAnnotations>
-  <elementImport xmi:id="_vDUdUG4tEeaciKY8-Wizlw">
+  <elementImport xmi:id="_IlsDAW-cEeai48fLq4zp7w">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
   </elementImport>
-  <elementImport xmi:id="_vDUdUW4tEeaciKY8-Wizlw">
+  <elementImport xmi:id="_IlsDAm-cEeai48fLq4zp7w">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interface"/>
   </elementImport>
-  <packagedElement xmi:type="uml:Stereotype" xmi:id="_vDUdUm4tEeaciKY8-Wizlw" name="VirtualHuman">
-    <eAnnotations xmi:id="_vDUdU24tEeaciKY8-Wizlw" source="Objing">
-      <contents xmi:type="uml:Property" xmi:id="_vDUdVG4tEeaciKY8-Wizlw" name="ID">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vDUdVW4tEeaciKY8-Wizlw" value="1a360ae9-374c-461b-b127-06ab86c06b87"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_IlsDA2-cEeai48fLq4zp7w" name="VirtualHuman">
+    <eAnnotations xmi:id="_IlsDBG-cEeai48fLq4zp7w" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_IlsDBW-cEeai48fLq4zp7w" name="ID">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_IlsDBm-cEeai48fLq4zp7w" value="1a360ae9-374c-461b-b127-06ab86c06b87"/>
       </contents>
     </eAnnotations>
-    <ownedAttribute xmi:id="_vDUdVm4tEeaciKY8-Wizlw" name="base_Class" association="_vDUdV24tEeaciKY8-Wizlw">
+    <ownedAttribute xmi:id="_IlsDB2-cEeai48fLq4zp7w" name="base_Class" association="_IlsDCG-cEeai48fLq4zp7w">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Extension" xmi:id="_vDUdV24tEeaciKY8-Wizlw" name="Class_VirtualHuman" memberEnd="_vDUdWG4tEeaciKY8-Wizlw _vDUdVm4tEeaciKY8-Wizlw">
-    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_vDUdWG4tEeaciKY8-Wizlw" name="extension_VirtualHuman" type="_vDUdUm4tEeaciKY8-Wizlw" aggregation="composite" association="_vDUdV24tEeaciKY8-Wizlw"/>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_IlsDCG-cEeai48fLq4zp7w" name="Class_VirtualHuman" memberEnd="_IlsDCW-cEeai48fLq4zp7w _IlsDB2-cEeai48fLq4zp7w">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_IlsDCW-cEeai48fLq4zp7w" name="extension_VirtualHuman" type="_IlsDA2-cEeai48fLq4zp7w" aggregation="composite" association="_IlsDCG-cEeai48fLq4zp7w"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Stereotype" xmi:id="_vDUdWW4tEeaciKY8-Wizlw" name="Role">
-    <eAnnotations xmi:id="_vDUdWm4tEeaciKY8-Wizlw" source="Objing">
-      <contents xmi:type="uml:Property" xmi:id="_vDUdW24tEeaciKY8-Wizlw" name="ID">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vDUdXG4tEeaciKY8-Wizlw" value="c6a64931-9cc1-4ee3-b4b7-51d001dfb707"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_IlsDCm-cEeai48fLq4zp7w" name="Role">
+    <eAnnotations xmi:id="_IlsDC2-cEeai48fLq4zp7w" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_IlsDDG-cEeai48fLq4zp7w" name="ID">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_IlsDDW-cEeai48fLq4zp7w" value="c6a64931-9cc1-4ee3-b4b7-51d001dfb707"/>
       </contents>
     </eAnnotations>
-    <ownedAttribute xmi:id="_vDUdXW4tEeaciKY8-Wizlw" name="base_Interface" association="_vDUdXm4tEeaciKY8-Wizlw">
+    <ownedAttribute xmi:id="_IlsDDm-cEeai48fLq4zp7w" name="base_Interface" association="_IlsDD2-cEeai48fLq4zp7w">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interface"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Extension" xmi:id="_vDUdXm4tEeaciKY8-Wizlw" name="Interface_Role" memberEnd="_vDUdX24tEeaciKY8-Wizlw _vDUdXW4tEeaciKY8-Wizlw">
-    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_vDUdX24tEeaciKY8-Wizlw" name="extension_Role" type="_vDUdWW4tEeaciKY8-Wizlw" aggregation="composite" association="_vDUdXm4tEeaciKY8-Wizlw"/>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_IlsDD2-cEeai48fLq4zp7w" name="Interface_Role" memberEnd="_IlsDEG-cEeai48fLq4zp7w _IlsDDm-cEeai48fLq4zp7w">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_IlsDEG-cEeai48fLq4zp7w" name="extension_Role" type="_IlsDCm-cEeai48fLq4zp7w" aggregation="composite" association="_IlsDD2-cEeai48fLq4zp7w"/>
   </packagedElement>
 </uml:Profile>

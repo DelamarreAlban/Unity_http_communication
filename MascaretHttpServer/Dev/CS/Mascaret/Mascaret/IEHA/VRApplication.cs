@@ -32,6 +32,7 @@ namespace Mascaret
 
         public override void parse(string applicationFileName, string baseDir, bool loadAll)
         {
+            MascaretApplication.Instance.VRComponentFactory.Log("GONNA PARSE");
             base.parse(applicationFileName, baseDir, loadAll);
         }
 

@@ -8,6 +8,15 @@ namespace Mascaret
     {
         public CallProcedureAction action;
 
+        private List<ProceduralBehavior> proceduralBehaviors = new List<ProceduralBehavior>();
+        public List<ProceduralBehavior> ProceduralBehaviors
+        {
+            get
+            {
+                return proceduralBehaviors;
+            }
+        }
+
         private ProceduralBehavior proceduralBehavior;
 
         public ProceduralBehavior ProceduralBehavior
@@ -98,7 +107,9 @@ namespace Mascaret
                                 {
                                     appli.VRComponentFactory.Log("Procedure launched for " + agt.name);
                                     proceduralBehavior = (ProceduralBehavior)(pbehavior);
-                                    
+                                    proceduralBehaviors.Add(proceduralBehavior);
+
+
                                     Dictionary<string, ValueSpecification> procParams = new Dictionary<string, ValueSpecification>();
 
                                     proceduralBehavior.pushProcedureToDo(askedProc, askedOrg, askedRole, procParams);

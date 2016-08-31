@@ -213,6 +213,7 @@ namespace Mascaret
 
 		try
 		{
+
             String s = MascaretApplication.Instance.readFlow(str);
             MascaretApplication.Instance.VRComponentFactory.Log(str + "  PARSE MODEL_LOADER : " + s);
 			_loader = XDocument.Parse(s);

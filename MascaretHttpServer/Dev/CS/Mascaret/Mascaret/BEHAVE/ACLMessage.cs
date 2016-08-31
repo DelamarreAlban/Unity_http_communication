@@ -173,7 +173,15 @@ namespace Mascaret
         //not implented right now
         public string toXML()
         {
-            return "";
+            string xmlMessage = @"<message performative="""+ getPerformativeText() + @""">"+"\n";
+            xmlMessage += "<sender>" + sender.name + "</sender>\n";
+            if(timestamp != null)
+                xmlMessage += "<date>" + timestamp.TimeExp + "</date>\n";
+            else
+                xmlMessage += "<date>" + "Temporal leak" + "</date>\n";
+            xmlMessage += "<content>" + content + "</content>\n";
+            xmlMessage += "</message>\n";
+            return xmlMessage;
         }
 
 
